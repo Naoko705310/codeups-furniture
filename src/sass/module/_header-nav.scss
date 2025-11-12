@@ -1,0 +1,77 @@
+@use "global" as *;
+
+// 背景スクロール制御
+body.is-fixed {
+  overflow: hidden;
+  height: 100%;
+}
+
+
+.header-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: $white;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease;
+  z-index: 1000;
+  overflow: hidden; /* ← 初期状態ではスクロール無効 */
+  @include mq(md) {
+    right: 0;
+    left: auto;
+  }
+}
+
+/* 開いたとき（ハンバーガークリックでis-active付与） */
+.header-nav.is-active {
+  opacity: 1;
+  visibility: visible;
+  overflow-y: auto; /* ← 開いたときに内部だけスクロール可能に */
+  -webkit-overflow-scrolling: touch; /* ← iOS滑らかスクロール対応 */
+}
+
+
+
+.header-nav__list {
+display: grid;
+grid-template-columns: 1fr;
+gap: rem(32);
+text-align: center;
+}
+
+// ナビ英語
+.header-nav__en {
+  font-family: $second-font-family;
+  font-size: rem(20);
+  color: $color-font;
+  font-weight: $normal;
+  line-height: 1.5;
+}
+
+// ナビ日本語
+.header-nav__ja {
+  display: block;
+  font-family: $base-font-family;
+  font-size: rem(10);
+  color: $color-font;
+  font-weight: $normal;
+  line-height: 1;
+}
+
+// SNSアイコン
+.header-nav__sns {
+display: flex;
+gap: rem(40);
+justify-content: center;
+margin-top: rem(40);
+}
+
+.header-nav__sns-item {
+  width: rem(20);
+  height: rem(20);
+  aspect-ratio: 20 / 20;
+}
+

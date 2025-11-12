@@ -1,0 +1,74 @@
+@use "global" as *;
+
+/* =========================================================
+  Hamburger
+  （ハンバーガーボタン）
+========================================================= */
+
+.hamburger {
+  width: rem(42);
+  height: rem(14);
+  position: relative;
+  z-index: 1001; // nav より上に表示
+  cursor: pointer;
+  // flex指定は削除してクリック不具合を回避
+  // 上下線の右寄せをmarginで調整
+  @include mq(md) {
+    width: rem(56);
+    height: rem(14);
+  }
+}
+
+/* ----------------------------------------------
+  線（2本）
+---------------------------------------------- */
+.hamburger__line01,
+.hamburger__line02 {
+  display: block;
+  height: 2px;
+  background-color: $color-main;
+  transition: all 0.4s ease;
+  position: absolute;
+  right: 0; // ← 右端基準
+}
+
+/* 1本目（上の線） */
+.hamburger__line01 {
+  width: 100%; // 長い線
+  top: 0; // 上側に配置
+}
+
+/* 2本目（下の線） */
+.hamburger__line02 {
+  width: calc(30/42*100%); // 短い線
+  bottom: 0; // 下側に配置
+  @include mq(md) {
+    width: calc(40/56*100%);
+  }
+}
+
+/* ----------------------------------------------
+  アクティブ時（is-active）
+---------------------------------------------- */
+// クリックでメニュー展開時の動き
+.hamburger.is-active .hamburger__line01 {
+  transform: translateY(rem(4)) rotate(18deg);
+  width: 100%; // 同じ長さに
+  @include mq(md) {
+    transform: translateY(rem(8)) rotate(18deg);
+  }
+}
+
+.hamburger.is-active .hamburger__line02 {
+  transform: translateY(rem(-9)) rotate(-18deg);
+  width: 100%; // 同じ長さに
+  @include mq(md) {
+    transform: translateY(rem(-4)) rotate(-18deg);
+  }
+}
+
+/* アクティブ時の色変更 */
+.hamburger.is-active .hamburger__line01,
+.hamburger.is-active .hamburger__line02 {
+  // background-color: $black;
+}

@@ -1,0 +1,42 @@
+@use "global" as *;
+
+.header {
+  margin-top: rem(19);
+}
+
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: rem(8) 0;
+}
+
+.header__logo {
+  display: block;
+  width: rem(105);
+  height: rem(27);
+  aspect-ratio: 105 / 27;
+
+  @include mq(md) {
+    width: rem(132);
+    height: rem(42);
+    aspect-ratio: 132 / 42;
+  }
+}
+
+.header__logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+
+.header__hamburger {
+
+}
+
+.header__nav {
+  max-width: rem(375);
+  margin-top: rem(120);
+  
+}
