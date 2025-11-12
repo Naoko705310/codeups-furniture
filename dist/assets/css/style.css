@@ -1,0 +1,279 @@
+body {
+	font-family: "Noto Sans JP", sans-serif;
+}
+
+.u-desktop {
+	display: none;
+}
+
+/* リキッドレイアウト対応 */
+
+html {
+	font-size: 16px;
+}
+
+/* ============================================
+   RESET CSS + アクセシビリティ対応
+   ============================================ */
+
+/* 全要素を border-box に統一（余計なサイズ計算を避ける） */
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* デフォルトの余白をリセット */
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+figure,
+blockquote,
+dl,
+dd {
+	margin: 0;
+}
+
+ul,
+ol {
+	list-style: none; /* 必要な場合は個別に list-style を戻す */
+	padding: 0;
+}
+
+/* スクロール挙動を滑らかに（ユーザー体験改善） */
+
+html {
+	scroll-behavior: smooth;
+}
+
+/* 本文の基本設定 */
+
+body {
+	font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
+	line-height: 1.5; /* 読みやすい行間 */
+	min-height: 100vh;
+	text-rendering: optimizeLegibility; /* 字形を見やすく */
+}
+
+/* リンクの基本リセット */
+
+a {
+	-webkit-text-decoration: none;
+	color: inherit;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+/* ホバー・アクティブ状態 */
+
+a:hover,
+a:active {
+	-webkit-text-decoration: none;
+	color: inherit;
+	text-decoration: none;
+}
+
+/* フォーカス状態（アクセシビリティ） */
+
+a:focus-visible {
+	outline: 2px solid #3498db;
+	outline-offset: 2px;
+}
+
+/* 画像は親要素の幅にフィットさせる */
+
+img {
+	display: block;
+	height: auto;
+	max-width: 100%;
+}
+
+/* 記事内要素の間隔を自動で確保 */
+
+article > * + * {
+	margin-top: 1em;
+}
+
+/* ============================================
+   フォーム要素リセット
+   ============================================ */
+
+/* フォントを継承・不要なデフォルト装飾を外す */
+
+input,
+button,
+select,
+textarea {
+	background: transparent;
+	border: none;
+	border-radius: 0;
+	font: inherit;
+	margin: 0;
+	padding: 0.5em; /* 最小限のクリック領域を確保 */
+}
+
+/* appearance: none は必要なものだけに限定 */
+
+.input-text,
+.input-email,
+.input-tel,
+.textarea-box {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+/* フォーカスリングは必ず残す（outline: none は禁止） */
+
+:focus-visible {
+	outline: 2px solid #3498db; /* キーボード操作用の青枠 */
+	outline-offset: 2px;
+}
+
+/* ボタンやセレクトボックスはカーソルを pointer に */
+
+input[type=submit],
+input[type=button],
+button,
+select,
+label {
+	cursor: pointer;
+}
+
+/* 無効状態をわかりやすく */
+
+input[disabled],
+button[disabled] {
+	cursor: not-allowed;
+	opacity: 0.6;
+}
+
+/* テキストエリアは縦方向のみリサイズ可能に */
+
+textarea {
+	resize: vertical;
+}
+
+/* ============================================
+   アクセシビリティ対応
+   ============================================ */
+
+/* スキップリンク（キーボードユーザー用） */
+
+.skip-link {
+	-webkit-text-decoration: none;
+	background: #000;
+	color: #fff;
+	left: 6px;
+	padding: 8px;
+	position: absolute;
+	text-decoration: none;
+	top: -40px;
+	z-index: 1000;
+}
+
+.skip-link:focus {
+	top: 6px;
+}
+
+/* 必須フィールドをラベルにマーク表示 */
+
+label.required::after {
+	color: #e74c3c;
+	content: " *";
+}
+
+/* エラーメッセージのスタイル */
+
+.error-message {
+	color: #e74c3c;
+	font-size: 0.9em;
+}
+
+/* エラー状態は入力中にだけ強調 */
+
+input:invalid:focus,
+textarea:invalid:focus,
+select:invalid:focus {
+	border: 2px solid #e74c3c;
+}
+
+/* ラジオ・チェックボックスは視覚的に隠すが、スクリーンリーダーでは有効 */
+
+input[type=radio],
+input[type=checkbox] {
+	clip: rect(0 0 0 0);
+	border: 0;
+	height: 1px;
+	margin: -1px;
+	opacity: 0;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+/* 代替UI（label側）にフォーカスリングを表示 */
+
+input[type=radio]:focus + label,
+input[type=checkbox]:focus + label {
+	outline: 2px solid #3498db;
+	outline-offset: 2px;
+}
+
+.inner {
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 15px;
+	padding-right: 15px;
+	width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+
+.u-desktop {
+	display: block;
+}
+
+.u-mobile {
+	display: none;
+}
+
+html {
+	font-size: 1.4814814815vw;
+}
+
+.inner {
+	max-width: 1130px;
+	padding-left: 25px;
+	padding-right: 25px;
+}
+
+}
+
+@media (min-width: 1080px) {
+
+html {
+	font-size: 16px;
+}
+
+}
+
+@media (max-width: 375px) {
+
+html {
+	font-size: 4.2666666667vw;
+}
+
+}
+
+
+/*# sourceMappingURL=style.css.map */
