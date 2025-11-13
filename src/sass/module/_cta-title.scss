@@ -1,0 +1,52 @@
+@use "global" as *;
+
+// CTAタイトル
+
+.cta-title {
+  display: inline-block;
+}
+
+.cta-title__en {
+  display: block;
+  font-family: $second-font-family;
+  font-size: rem(40);
+  color: $color-font;
+  font-weight: $normal;
+  line-height: 1;
+  text-align: center;
+  @include mq(md) {
+    font-size: rem(64);
+  }
+}
+
+.cta-title__ja {
+  display: block;
+  font-family: $base-font-family;
+  font-size: rem(16);
+  color: $color-font;
+  font-weight: $normal;
+  line-height: 1.5;
+  margin-top: rem(8);
+  text-align: center;
+  position: relative;
+  @include mq(md) {
+    text-align: left;
+    padding-left: rem(92);
+  }
+}
+
+// 日本語タイトルの横線
+.cta-title__ja::before {
+  @include mq(md) {
+    content: "";
+    display: block;
+    width: rem(80);
+    height: rem(1);
+    background-color: $color-font;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+}
+

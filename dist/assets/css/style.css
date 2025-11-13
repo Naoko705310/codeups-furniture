@@ -1,5 +1,5 @@
 body {
-	font-family: "Noto Sans JP", sans-serif;
+	font-family: "Noto Serif JP", sans-serif;
 }
 
 .u-desktop {
@@ -229,6 +229,224 @@ input[type=checkbox]:focus + label {
 	outline-offset: 2px;
 }
 
+.button {
+	-webkit-text-decoration: none;
+	border: 1px solid #6F8471;
+	color: #151515;
+	display: inline-block;
+	font-family: "Cormorant Garamond", serif;
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1;
+	padding: 0.625rem 0 0.625rem 0.875rem;
+	position: relative;
+	text-align: left;
+	text-decoration: none;
+	transition: all 0.3s ease;
+	width: 6.4375rem;
+}
+
+.button::after {
+	border-bottom: 1px solid #151515;
+	border-right: 1px solid #151515;
+	content: "";
+	display: inline-block;
+	height: 0.1875rem;
+	margin-left: 0.5rem;
+	max-width: 100%;
+	position: absolute;
+	top: 50%;
+	transform: skew(45deg);
+	width: 2rem;
+	z-index: 1;
+}
+
+.button:hover {
+	opacity: 0.9;
+	transform: scale(1.05);
+}
+
+.button:hover::after {
+	margin-left: 0.625rem;
+}
+
+.cta-item {
+	padding: 1.5rem 0;
+	text-align: center;
+	width: 100%;
+}
+
+.cta-item__title {
+	text-align: center;
+}
+
+.cta-item__button {
+	margin-top: 1.5rem;
+}
+
+.cta-item--company {
+	border: 1px solid #6F8471;
+	padding: 5rem 0;
+}
+
+.cta-item--contact {
+	background-color: #ffffff;
+	border: 1px solid #6F8471;
+	padding: 6.5rem 0;
+}
+
+.cta-items {
+	grid-gap: 2.5rem;
+	display: grid;
+	gap: 2.5rem;
+	grid-template-columns: 1fr;
+}
+
+.cta-title {
+	display: inline-block;
+}
+
+.cta-title__en {
+	color: #151515;
+	display: block;
+	font-family: "Cormorant Garamond", serif;
+	font-size: 2.5rem;
+	font-weight: 400;
+	line-height: 1;
+	text-align: center;
+}
+
+.cta-title__ja {
+	color: #151515;
+	display: block;
+	font-family: "Noto Serif JP", sans-serif;
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.5;
+	margin-top: 0.5rem;
+	position: relative;
+	text-align: center;
+}
+
+.cta {
+	margin-bottom: -1.5rem;
+	position: relative;
+	z-index: 10;
+}
+
+.cta__inner {
+	padding: 0 0.9375rem;
+}
+
+.footer-logo {
+	aspect-ratio: 128/34;
+	height: 2.125rem;
+	width: 8rem;
+}
+
+/* =========================================================
+  Footer Nav
+  （フッターナビ）
+========================================================= */
+
+.footer-nav {
+	margin-top: 2.5rem;
+}
+
+/* ----------------------------------------------
+  共通設定
+---------------------------------------------- */
+
+.footer-nav__item a {
+	-webkit-text-decoration: none;
+	color: #ffffff;
+	display: inline-block;
+	font-family: "Cormorant Garamond", serif;
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1;
+	text-decoration: none;
+	transition: opacity 0.3s ease;
+}
+
+.footer-nav__item a:hover {
+	opacity: 0.7;
+}
+
+/* ----------------------------------------------
+  上段（Home）
+---------------------------------------------- */
+
+.footer-nav__list--upper {
+	border-bottom: 1px solid #ffffff;
+	padding-bottom: 0.5rem;
+	text-align: left;
+}
+
+.footer-nav__list--upper .footer-nav__item a {
+	color: #ffffff;
+	font-family: "Cormorant Garamond", serif;
+	font-size: 1.1875rem;
+	font-weight: 400;
+	line-height: 1;
+}
+
+/* ----------------------------------------------
+  下段（その他のメニュー）
+---------------------------------------------- */
+
+.footer-nav__list--lower {
+	display: flex;
+	flex-wrap: nowrap;
+	gap: 0.75rem;
+	justify-content: flex-start;
+	margin-top: 0.5rem;
+}
+
+.footer {
+	background-image: url(../images/common/footer-bg.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	z-index: 1;
+}
+
+.footer__inner {
+	padding-bottom: 2.5rem;
+	padding-top: 2.6875rem;
+}
+
+.footer__info {
+	margin-top: 1rem;
+}
+
+.footer__info-text {
+	color: #ffffff;
+	font-family: "Noto Serif JP", sans-serif;
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1;
+}
+
+.footer__info-text:not(:first-child) {
+	margin-top: 0.5rem;
+}
+
+.footer__nav {
+	margin-top: 1.75rem;
+}
+
+.footer__copyright {
+	color: #ffffff;
+	font-family: "Cormorant Garamond", serif;
+	font-size: 0.875rem;
+	font-weight: 400;
+	line-height: 1;
+	margin-top: 2.5rem;
+	text-align: center;
+}
+
 /* =========================================================
   Hamburger
   （ハンバーガーボタン）
@@ -333,7 +551,7 @@ body.is-fixed {
 .header-nav__ja {
 	color: #151515;
 	display: block;
-	font-family: "Noto Sans JP", sans-serif;
+	font-family: "Noto Serif JP", sans-serif;
 	font-size: 0.625rem;
 	font-weight: 400;
 	line-height: 1;
@@ -390,6 +608,44 @@ body.is-fixed {
 	width: 100%;
 }
 
+.section-title {
+	display: inline-block;
+}
+
+.section-title__en {
+	color: #151515;
+	font-family: "Cormorant Garamond", serif;
+	font-size: 2.5rem;
+	font-weight: 400;
+	line-height: 1;
+	text-align: left;
+}
+
+.section-title__ja {
+	color: #151515;
+	display: block;
+	font-family: "Noto Serif JP", sans-serif;
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.5;
+	margin-top: 0.5rem;
+	padding-left: 5.75rem;
+	position: relative;
+	text-align: left;
+}
+
+.section-title__ja::before {
+	background-color: #151515;
+	content: "";
+	display: block;
+	height: 0.0625rem;
+	left: 0;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 5rem;
+}
+
 @media screen and (min-width: 768px) {
 
 .u-desktop {
@@ -402,6 +658,85 @@ body.is-fixed {
 
 html {
 	font-size: 1.4814814815vw;
+}
+
+.button {
+	padding: 0.25rem 0 0.25rem 0.875rem;
+}
+
+.cta-item {
+	text-align: left;
+}
+
+.cta-item__button {
+	margin-top: 2.75rem;
+}
+
+.cta-item--company {
+	margin: 1.5rem 0;
+}
+
+.cta-items {
+	gap: 0;
+	grid-template-columns: repeat(2, 1fr);
+}
+
+.cta-title__en {
+	font-size: 4rem;
+}
+
+.cta-title__ja {
+	padding-left: 5.75rem;
+	text-align: left;
+}
+
+.cta-title__ja::before {
+	background-color: #151515;
+	content: "";
+	display: block;
+	height: 0.0625rem;
+	left: 0;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 5rem;
+}
+
+.cta__inner {
+	padding: 0;
+}
+
+.footer-logo {
+	aspect-ratio: 132/42;
+	height: 2.625rem;
+	width: 8.25rem;
+}
+
+.footer-nav {
+	margin-top: 0rem;
+}
+
+.footer-nav__list--upper {
+	margin-top: 0rem;
+	padding-bottom: 0.25rem;
+	text-align: left;
+}
+
+.footer-nav__list--lower {
+	gap: 2.5rem;
+	justify-content: flex-start;
+}
+
+.footer__inner {
+	align-items: flex-end;
+	display: flex;
+	justify-content: space-between;
+	padding-bottom: 5rem;
+	padding-top: 5rem;
+}
+
+.footer__info {
+	margin-top: 1.5rem;
 }
 
 .hamburger {
@@ -436,6 +771,10 @@ html {
 	max-width: 1130px;
 	padding-left: 25px;
 	padding-right: 25px;
+}
+
+.section-title__en {
+	font-size: 4rem;
 }
 
 }

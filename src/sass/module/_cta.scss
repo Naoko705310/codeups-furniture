@@ -1,0 +1,20 @@
+@use "global" as *;
+
+// CTAセクション
+
+.cta {
+  position: relative;
+  z-index: 10;
+  margin-bottom: rem(-24);
+}
+
+.cta__inner {
+  padding: 0 rem(15);
+  @include mq(md) {
+    padding: 0;
+  }
+}
+
+
+
+

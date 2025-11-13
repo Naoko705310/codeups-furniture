@@ -1,0 +1,72 @@
+@use "global" as *;
+
+/* =========================================================
+  Footer Nav
+  （フッターナビ）
+========================================================= */
+
+.footer-nav {
+  margin-top: rem(40);
+
+  @include mq(md) {
+    margin-top: rem(0);
+  }
+}
+
+/* ----------------------------------------------
+  共通設定
+---------------------------------------------- */
+.footer-nav__item a {
+  display: inline-block;
+  font-family: $second-font-family;
+  font-size: rem(16);
+  color: $white;
+  font-weight: $normal;
+  line-height: 1;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+/* ----------------------------------------------
+  上段（Home）
+---------------------------------------------- */
+.footer-nav__list--upper {
+  text-align: left;
+  border-bottom: 1px solid $white; // 下線
+  padding-bottom: rem(8);
+
+
+  @include mq(md) {
+    text-align: left; // PCでは左寄せ
+    padding-bottom: rem(4);
+    margin-top: rem(0);
+  }
+}
+
+.footer-nav__list--upper .footer-nav__item a {
+  font-family: $second-font-family;
+  font-size: rem(19);
+  color: $white;
+  font-weight: $normal;
+  line-height: 1;
+}
+
+/* ----------------------------------------------
+  下段（その他のメニュー）
+---------------------------------------------- */
+.footer-nav__list--lower {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  gap: rem(12);
+  margin-top: rem(8);
+
+  @include mq(md) {
+    justify-content: flex-start;
+    gap: rem(40);
+  }
+}

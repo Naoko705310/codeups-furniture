@@ -1,0 +1,45 @@
+@use "global" as *;
+
+// セクションタイトル
+
+.section-title {
+  display: inline-block;
+}
+
+.section-title__en {
+  font-family: $second-font-family;
+  font-size: rem(40);
+  color: $color-font;
+  font-weight: $normal;
+  line-height: 1;
+  text-align: left;
+  @include mq(md) {
+    font-size: rem(64);
+  }
+}
+
+.section-title__ja {
+  display: block;
+  font-family: $base-font-family;
+  font-size: rem(16);
+  color: $color-font;
+  font-weight: $normal;
+  line-height: 1.5;
+  margin-top: rem(8);
+  text-align: left;
+  padding-left: rem(92);
+  position: relative;
+}
+
+.section-title__ja::before {
+  content: "";
+  display: block;
+  width: rem(80);
+  height: rem(1);
+  background-color: $color-font;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+

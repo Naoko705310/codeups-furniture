@@ -1,0 +1,12 @@
+@use "global" as *;
+
+.footer-logo {
+  width: rem(128);
+  height: rem(34);
+  aspect-ratio: 128 / 34;
+  @include mq(md) {
+    width: rem(132);
+    height: rem(42);
+    aspect-ratio: 132 / 42;
+  }
+}

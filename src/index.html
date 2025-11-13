@@ -29,8 +29,8 @@
     <!-- Google フォント（既存指定を保持） -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Noto Sans JP -->
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Noto Serif JP -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
     <!-- Cormorant Garamond -->
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
   
@@ -116,12 +116,124 @@
       </div>
     </nav>
   </header>
-
   <main>
+    <!-- 共通パーツ -->
+    <!-- ボタン -->
+    <a href="#" class="button">view more</a>
+    <!-- CTAタイトル -->
+    <h2 class="cta-title">
+      <span class="cta-title__en">Company</span>
+      <span class="cta-title__ja">会社概要</span>
+    </h2>
+    <!-- セクションタイトル -->
+    <h2 class="section-title">
+      <span class="section-title__en">Company</span>
+      <span class="section-title__ja">会社概要</span>
+    </h2>
+
+    <section class="top-fv">
+      <div class="top-fv__inner inner">
+        <div class="top-fv__content">
+          <h1 class="top-fv__copy">
+            Simplicity is <br>
+            the keynote <br>
+            of all true <br>
+            elegance.
+          </h1>
+          <div class="top-fv__image">
+            <img src="./assets/images/common/top-fv.jpg" alt="Code Ups">
+          </div>
+          <div class="top-fv__sns">
+            <ul class="top-fv__sns-items sns-items">
+              <li class="top-fv__sns-item">
+                <a href="#" class="top-fv__sns-link">
+                  <img src="./assets/images/common/icon-instagram.png" alt="Instagram">
+                </a>
+              </li>
+              <li class="top-fv__sns-item">
+                <a href="#" class="top-fv__sns-link">
+                  <img src="./assets/images/common/icon-twitter.png" alt="Twitter">
+                </a>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+    <!-- CTAコンテンツ -->
+    <section class="cta top-cta">
+      <div class="cta__inner">
+        <ul class="cta__items cta-items">
+          <li class="cta-item cta-item--company">
+            <h2 class="cta-item__title cta-title">
+              <span class="cta-title__en">Company</span>
+              <span class="cta-title__ja">会社概要</span>
+            </h2>
+            <div class="cta-item__button">
+              <a href="#" class="button">view more</a>
+            </div>
+          </li>
+          <li class="cta-item cta-item--contact">
+            <h2 class="cta-item__title cta-title">
+              <span class="cta-title__en">Contact</span>
+              <span class="cta-title__ja">お問い合わせ</span>
+            </h2>
+            <div class="cta-item__button">
+              <a href="#" class="button">view more</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+
 
   </main>
-  <footer>
-
+  <footer class="footer top-footer">
+    <div class="footer__inner inner">
+      <div class="footer__content-wrapper">
+        <!-- ロゴ -->
+        <div class="footer__logo footer-logo">
+          <a href="#">
+            <img src="./assets/images/common/footer-logo.png" alt="Code Ups">
+          </a>
+        </div>
+    
+        <!-- 会社情報 -->
+        <div class="footer__info">
+          <p class="footer__info-text">株式会社 Code Ups</p>
+          <p class="footer__info-text">東京都港区1-1</p>
+          <p class="footer__info-text">011-011-011</p>
+          <p class="footer__info-text">受付時間9:00-17:00</p>
+        </div>
+      </div>
+      <div class="footer__nav-wrapper">
+      <!-- フッターナビ -->
+      <nav class="footer__nav footer-nav">
+        <ul class="footer-nav__list footer-nav__list--upper">
+          <li class="footer-nav__item">
+            <a href="#">Home</a>
+          </li>
+        </ul>
+        <ul class="footer-nav__list footer-nav__list--lower">
+          <li class="footer-nav__item"><a href="#about">About</a></li>
+          <li class="footer-nav__item"><a href="#products">Products</a></li>
+          <li class="footer-nav__item"><a href="#works">Works</a></li>
+          <li class="footer-nav__item"><a href="#company">Company</a></li>
+          <li class="footer-nav__item"><a href="#news">News</a></li>
+          <li class="footer-nav__item"><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <!-- コピーライト -->
+      <p class="footer__copyright">&copy;2023 Code Ups.</p>
+      </div>
+    </div>
   </footer>
 </body>
 

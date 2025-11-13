@@ -1,0 +1,49 @@
+@use "global" as *;
+
+// ボタン
+
+.button {
+  display: inline-block;
+  width: rem(103);
+  border: 1px solid $color-main;
+  font-family: $second-font-family;
+  font-size: rem(16);
+  color: $color-font;
+  font-weight: $normal;
+  line-height: 1;
+  padding: rem(10) 0 rem(10) rem(14);
+  text-align: left;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  @include mq(md) {
+    padding: rem(4) 0 rem(4) rem(14);
+  }
+}
+
+// 矢印
+.button::after {
+  content: "";
+  width: rem(32);
+  max-width: 100%;
+  height: rem(3);
+  border-bottom: 1px solid $black;
+  border-right: 1px solid $black;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  transform: skew(45deg);
+  z-index: 1;
+  margin-left: rem(8);
+}
+
+// hover時アニメーション
+.button:hover {
+  transform: scale(1.05); //ボタン拡大
+  opacity: 0.9;
+}
+
+// 矢印が右に動く
+.button:hover::after {
+  margin-left: rem(10);
+}

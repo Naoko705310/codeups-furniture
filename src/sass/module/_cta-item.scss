@@ -1,0 +1,40 @@
+@use "global" as *;
+
+// CTAアイテム
+
+.cta-item {
+  width: 100%;
+  text-align: center;
+  padding: rem(24) 0;
+  @include mq(md) {
+    text-align: left;
+  }
+}
+
+.cta-item__title {
+  text-align: center;
+}
+
+.cta-item__button {
+  margin-top: rem(24);
+  @include mq(md) {
+    margin-top: rem(44);
+  }
+}
+
+// 会社概要
+.cta-item--company {
+  border: 1px solid $color-main;
+  padding: rem(80) 0;
+  @include mq(md) {
+    margin: rem(24) 0;
+  }
+  // padding: rem(80) rem(147) rem(80) rem(325);
+}
+
+// お問い合わせ
+.cta-item--contact {
+  background-color: $white;
+  border: 1px solid $color-main;
+  padding: rem(104) 0;
+}
