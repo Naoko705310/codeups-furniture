@@ -1,0 +1,69 @@
+@use "global" as *;
+
+// FV
+.top-fv {
+
+}
+
+.top-fv__inner {
+
+}
+
+.inner {
+
+}
+
+.top-fv__content {
+
+}
+
+.top-fv__copy {
+  font-family: $second-font-family;
+  font-size: rem(40);
+  color: $color-font;
+  font-weight: $normal;
+  line-height: 1;
+  @include mq(md) {
+    font-size: rem(64);
+  }
+}
+
+.top-fv__image {
+  width: rem(360);
+  aspect-ratio: 360 / 270;
+  @include mq(md) {
+    width: rem(1260);
+    aspect-ratio: 1260 / 480;
+  }
+}
+
+.top-fv__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.top-fv__sns {
+
+}
+
+.sns-items__items {
+
+}
+
+.sns-items {
+
+}
+
+.sns-items__item {
+
+}
+
+.sns-item {
+
+}
+
+.sns-item__link {
+
+}
+

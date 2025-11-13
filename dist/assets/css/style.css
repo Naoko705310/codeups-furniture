@@ -646,6 +646,45 @@ body.is-fixed {
 	width: 5rem;
 }
 
+.sns-item {
+	aspect-ratio: 24/24;
+	height: 1.5rem;
+	width: 1.5rem;
+}
+
+.sns-item__link {
+	display: block;
+	height: 100%;
+	width: 100%;
+}
+
+.sns-item__link img {
+	-o-object-fit: contain;
+	height: 100%;
+	object-fit: contain;
+	width: 100%;
+}
+
+.top-fv__copy {
+	color: #151515;
+	font-family: "Cormorant Garamond", serif;
+	font-size: 2.5rem;
+	font-weight: 400;
+	line-height: 1;
+}
+
+.top-fv__image {
+	aspect-ratio: 360/270;
+	width: 22.5rem;
+}
+
+.top-fv__image img {
+	-o-object-fit: cover;
+	height: 100%;
+	object-fit: cover;
+	width: 100%;
+}
+
 @media screen and (min-width: 768px) {
 
 .u-desktop {
@@ -775,6 +814,36 @@ html {
 
 .section-title__en {
 	font-size: 4rem;
+}
+
+.sns-items {
+	grid-gap: 1.5rem;
+	display: grid;
+	gap: 1.5rem;
+	grid-template-columns: 1fr;
+	padding-top: 13.75rem;
+	position: relative;
+	width: 1.5rem;
+}
+
+.sns-items::before {
+	background-color: #151515;
+	content: "";
+	height: 11.25rem;
+	left: 50%;
+	position: absolute;
+	top: 0;
+	transform: translateX(-50%);
+	width: 1px;
+}
+
+.top-fv__copy {
+	font-size: 4rem;
+}
+
+.top-fv__image {
+	aspect-ratio: 1260/480;
+	width: 78.75rem;
 }
 
 }

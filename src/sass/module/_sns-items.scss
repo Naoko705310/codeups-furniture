@@ -1,0 +1,27 @@
+@use "global" as *;
+
+.sns-items {
+  // display: none;
+  @include mq(md) {
+    width: rem(24);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: rem(24);
+    position: relative;
+    padding-top: rem(180 + 40);
+  }
+}
+
+// SNSアイコン上の縦線
+.sns-items::before {
+  @include mq(md) {
+    content: "";
+    position: absolute;
+    top: 0;      // 上に伸ばす長さ（調整ポイント）
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1px;
+    height: rem(180);    // 全体の線の長さ（調整ポイント）
+    background-color: $black;
+  }
+}
