@@ -1,0 +1,54 @@
+@use "global" as *;
+
+// 最新ニュースカード（TOPページ）
+
+.news-card-latest {
+  background-color: rgba($black, 0.9); // ← 背景だけ90%不透明（=10%透過）
+  padding: rem(24) rem(16);
+  @include mq(md) {
+    padding: rem(40) rem(80) rem(40) rem(180);
+  }
+}
+
+.news-card-latest__heading {
+  border-bottom: 1px solid $white;
+  padding-bottom: rem(16);
+  @include mq(md) {
+    padding-bottom: rem(8);
+  }
+}
+
+.news-card-latest__date {
+  display: block;
+  font-family: $second-font-family;
+  font-size: rem(14);
+  color: $white;
+  font-weight: $normal;
+  line-height: 1.5;
+}
+
+.news-card-latest__title {
+  font-family: $base-font-family;
+  font-size: rem(16);
+  color: $white;
+  font-weight: $normal;
+  line-height: 1;
+}
+
+.news-card-latest__button {
+  margin-top: rem(16);
+  text-align: right;
+  @include mq(md) {
+    margin-top: rem(35);
+  }
+}
+.news-card-latest__button .button {
+  border: 1px solid $white;
+  color: $white;
+}
+
+// 矢印
+.news-card-latest__button .button::after {
+  border-bottom: 1px solid $white;
+  border-right: 1px solid $white;
+}

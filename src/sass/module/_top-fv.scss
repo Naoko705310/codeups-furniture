@@ -29,11 +29,11 @@
 }
 
 .top-fv__image {
-  width: rem(360);
+  // width: rem(360);
   aspect-ratio: 360 / 270;
   @include mq(md) {
-    width: rem(1260);
-    aspect-ratio: 1260 / 480;
+    // width: rem(1260);
+    // aspect-ratio: 1260 / 480;
   }
 }
 
@@ -67,3 +67,7 @@
 
 }
 
+// 最新ニュースカード（TOPページ）
+.top-fv__news {
+
+}

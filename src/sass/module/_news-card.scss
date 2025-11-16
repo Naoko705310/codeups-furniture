@@ -1,0 +1,75 @@
+@use "global" as *;
+
+.news-card {
+  height: 100%; // gridの時に高さ揃え
+  border: 1px solid $color-main;
+  padding: rem(16) rem(16) rem(24) rem(16);
+}
+
+.news-card__image {
+  width: 100%;
+  aspect-ratio: 308 / 235;
+}
+
+.news-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.news-card__body {
+  margin-top: rem(16);
+}
+
+.news-card__date {
+  display: block;
+  font-family: $second-font-family;
+  font-size: rem(14);
+  color: $color-font;
+  font-weight: $normal;
+  line-height: 1.5;
+}
+
+.news-card__title {
+  font-family: $base-font-family;
+  font-size: rem(24);
+  color: $color-font;
+  font-weight: $normal;
+  line-height: 1;
+}
+
+
+// タグコンテナ
+.news-card__tags {
+  line-height: 0; // ★継承をリセットして高さを奪わせない
+  margin-top: rem(9);
+  min-height: rem(18); // タグの高さ分を確保
+}
+
+.news-card__tag,
+.news-card-latest__tag {
+  min-width: rem(60);
+  display: inline-block;
+  background-color: $color-main;
+  font-family: $second-font-family;
+  font-size: rem(12);
+  color: $white;
+  font-weight: $normal;
+  line-height: 1.2;
+  text-align: center;
+  padding: rem(2) 0;
+  border-radius: rem(2);
+}
+
+.news-card__text {
+  font-family: $base-font-family;
+  font-size: rem(14);
+  color: $color-font;
+  font-weight: $normal;
+  line-height: 1.5;
+  margin-top: rem(4);
+}
+
+
+
+

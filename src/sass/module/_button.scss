@@ -12,6 +12,7 @@
   font-weight: $normal;
   line-height: 1;
   padding: rem(10) 0 rem(10) rem(14);
+  margin-right: rem(17);
   text-align: left;
   text-decoration: none;
   transition: all 0.3s ease;
@@ -32,9 +33,9 @@
   display: inline-block;
   position: absolute;
   top: 50%;
+  right: rem(-17);
   transform: skew(45deg);
   z-index: 1;
-  margin-left: rem(8);
 }
 
 // hover時アニメーション

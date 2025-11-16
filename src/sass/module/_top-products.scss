@@ -1,0 +1,67 @@
+@use "global" as *;
+
+// 商品（TOPページ）
+
+.top-products {
+
+}
+
+.top-products__inner {
+
+}
+
+.top-products__content {
+  background-image: url(../images/common/top-products-bg.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: rem(47) rem(15) rem(49) rem(15);
+  @include mq(md) {
+    padding: rem(40) rem(42) rem(140) rem(180);
+  }
+
+}
+
+.section-title {
+
+}
+
+.section-title__en {
+
+}
+
+.section-title__ja {
+
+}
+
+.top-products__description {
+  font-family: $base-font-family;
+  font-size: rem(16);
+  color: $color-font;
+  font-weight: $normal;
+  line-height: 1.5;
+  margin-top: rem(44);
+  @include mq(md) {
+    margin-top: 0;
+  }
+}
+
+.top-philosophy__button {
+  margin-top: rem(52);
+  @include mq(md) {
+    margin-top: rem(36);
+  }
+}
+
+.button {
+
+}
+
+.top-products__slider {
+
+}
+
+.top-products__slider-item {
+
+}
+
