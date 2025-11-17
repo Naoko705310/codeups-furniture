@@ -19,19 +19,6 @@
   @include mq(md) {
     padding: rem(40) rem(42) rem(140) rem(180);
   }
-
-}
-
-.section-title {
-
-}
-
-.section-title__en {
-
-}
-
-.section-title__ja {
-
 }
 
 .top-products__description {
@@ -46,16 +33,14 @@
   }
 }
 
-.top-philosophy__button {
+.top-products__button {
   margin-top: rem(52);
   @include mq(md) {
     margin-top: rem(36);
   }
 }
 
-.button {
 
-}
 
 .top-products__slider {
 

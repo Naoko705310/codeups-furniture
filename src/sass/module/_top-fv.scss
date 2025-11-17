@@ -9,12 +9,12 @@
 
 }
 
-.inner {
-
-}
-
 .top-fv__content {
   margin-top: rem(59);
+  @include mq(md) {
+    position: relative;
+    padding-bottom: rem(142);
+  }
 
 }
 
@@ -53,26 +53,6 @@
   }
 }
 
-.sns-items__items {
-
-}
-
-.sns-items {
-
-}
-
-.sns-items__item {
-
-}
-
-.sns-item {
-
-}
-
-.sns-item__link {
-
-}
-
 // 画像
 .top-fv__image {
   width: 100%;
@@ -88,16 +68,15 @@
   object-fit: cover;
 }
 
-
-
 // 最新ニュースカード（TOPページ）
 .top-fv__news {
   margin-left: rem(-15);
   @include mq(md) {
-    // margin: 0 calc(50% - 50vw);
-    // width: 100vw;
     width: calc(900 / 1440 * 100vw);  // ← 62.5vwになる
     margin-right: auto;
-    margin-left: calc(50% - 50vw);   // ← 画面左端に合わせる万能式
+    margin-left: calc(50% - 50vw);//画面左端にくっつける
+    position: absolute;
+    bottom: 0;
+    left: 0;
   }
 }
