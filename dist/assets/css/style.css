@@ -287,13 +287,11 @@ input[type=checkbox]:focus + label {
 
 .cta-item--company {
 	border: 1px solid #6F8471;
-	padding: 5rem 0;
 }
 
 .cta-item--contact {
 	background-color: #ffffff;
 	border: 1px solid #6F8471;
-	padding: 6.5rem 0;
 }
 
 .cta-items {
@@ -330,7 +328,6 @@ input[type=checkbox]:focus + label {
 }
 
 .cta {
-	margin-bottom: -1.5rem;
 	position: relative;
 	z-index: 10;
 }
@@ -409,6 +406,7 @@ input[type=checkbox]:focus + label {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
+	margin-top: 2.5rem;
 	position: relative;
 	z-index: 1;
 }
@@ -968,6 +966,16 @@ html {
 
 .cta-item--company {
 	margin: 1.5rem 0;
+	padding-bottom: 5rem;
+	padding-right: 20.4166666667%;
+	padding-top: 5rem;
+	text-align: right;
+}
+
+.cta-item--contact {
+	padding-bottom: 6.5rem;
+	padding-left: 22.9166666667%;
+	padding-top: 6.5rem;
 }
 
 .cta-items {
@@ -996,6 +1004,10 @@ html {
 	width: 5rem;
 }
 
+.cta {
+	margin-bottom: -1.5rem;
+}
+
 .cta__inner {
 	padding: 0;
 }
@@ -1019,6 +1031,10 @@ html {
 .footer-nav__list--lower {
 	gap: 2.5rem;
 	justify-content: flex-start;
+}
+
+.footer {
+	margin-top: 0;
 }
 
 .footer__inner {

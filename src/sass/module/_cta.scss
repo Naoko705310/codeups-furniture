@@ -5,7 +5,9 @@
 .cta {
   position: relative;
   z-index: 10;
-  margin-bottom: rem(-24);
+  @include mq(md) {
+    margin-bottom: rem(-24);
+  }
 }
 
 .cta__inner {

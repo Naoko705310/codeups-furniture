@@ -25,16 +25,22 @@
 // 会社概要
 .cta-item--company {
   border: 1px solid $color-main;
-  padding: rem(80) 0;
   @include mq(md) {
+    padding-top: rem(80);
+    padding-right: calc(147/720*100%);
+    padding-bottom: rem(80);
     margin: rem(24) 0;
+    text-align: right;
   }
-  // padding: rem(80) rem(147) rem(80) rem(325);
 }
 
 // お問い合わせ
 .cta-item--contact {
   background-color: $white;
   border: 1px solid $color-main;
-  padding: rem(104) 0;
+  @include mq(md) {
+    padding-top: rem(104);
+    padding-bottom: rem(104);
+    padding-left: calc(165/720*100%);
+  }
 }

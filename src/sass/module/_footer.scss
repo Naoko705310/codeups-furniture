@@ -7,6 +7,10 @@
   background-repeat: no-repeat;
   position: relative;
   z-index: 1;
+  margin-top: rem(40);
+  @include mq(md) {
+    margin-top: 0;
+  }
 }
 
 .footer__inner {
