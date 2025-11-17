@@ -1,34 +1,37 @@
 @use "global" as *;
 
-// Productカード
+// トップページの商品スライド
 
-.product-card__image {
+.product-slide {
+
+}
+
+.product-slide__image {
   width: 100%;
-  aspect-ratio: 165 / 110;
+  aspect-ratio: 264 / 176;
+  box-shadow: rem(4) rem(4) rem(8) rem(0) rgba(0, 0, 0, 0.25);
   @include mq(md) {
-    aspect-ratio: 270 / 180;
+    aspect-ratio: 375 / 250;
   }
 }
 
-.product-card__image img {
+.product-slide__image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-
 }
 
-.product-card__body {
+.product-slide__body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: #fafafa;
   padding: rem(12) rem(8) rem(16) rem(8);
   @include mq(md) {
     padding: rem(24) rem(15) rem(42) rem(15);
   }
 }
 
-.product-card__title {
+.product-slide__title {
   font-family: $base-font-family;
   font-size: rem(16);
   color: $color-font;
@@ -38,7 +41,7 @@
   padding-left: rem(8);
 }
 
-.product-card__title::before {
+.product-slide__title::before {
   content: "";
   display: block;
   width: rem(6);
@@ -50,7 +53,7 @@
   border-radius: 50%;
 }
 
-.product-card__subtitle {
+.product-slide__subtitle {
   font-family: $second-font-family;
   font-size: rem(14);
   color: $color-font;
@@ -58,15 +61,19 @@
   line-height: 1.5;
 }
 
-.product-card__text {
-  font-family: $base-font-family;
-  font-size: rem(14);
-  color: $color-font;
-  font-weight: $normal;
-  line-height: 1.5;
-  margin-top: rem(8);
-  @include mq(md) {
-    margin-top: rem(16);
-  }
+.top-products__slider-buttons {
+
+}
+
+.swiper-button-prev {
+
+}
+
+.swiper-button-next {
+
+}
+
+.swiper-pagination {
+
 }
 

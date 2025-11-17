@@ -36,10 +36,12 @@
   
     <!-- CSS -->
     <link rel="stylesheet" href="./assets/css/style.css?v=251112_1331">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css?v=251112_1331"/>
   
     <!-- JavaScript -->
     <script defer src="https://code.jquery.com/jquery-3.7.1.min.js"
       integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+      <script defer src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js?v=251112_1331"></script>
     <script defer src="./assets/js/script.js?v=251112_1331"></script>
   </head>
   
@@ -219,11 +221,61 @@
             <a href="#" class="button">view more</a>
           </div>
         </div>
-        <!-- スライド -->
-        <div class="top-products__slider">
-          <div class="top-products__slider-item">
-            <img src="./assets/images/common/products-item01.jpg" alt="Code Ups">
+        <!-- ▼ スライダー本体 ------------------------------- -->
+        <div class="top-products__slider swiper">
+
+          <div class="swiper-wrapper">
+
+            <!-- ①スライド -->
+            <div class="swiper-slide product-slide">
+              <a href="#">
+                <div class="product-slide__image">
+                  <img src="./assets/images/common/products-item01.jpg" alt="アンティークソファ">
+                </div>
+                <div class="product-slide__body">
+                  <p class="product-slide__title">アンティークソファ</p>
+                  <p class="product-slide__subtitle">US</p>
+                </div>
+              </a>
+            </div>
+
+            <!-- ② -->
+            <div class="swiper-slide product-slide">
+              <a href="#">
+                <div class="product-slide__image">
+                  <img src="./assets/images/common/products-item02.jpg" alt="ソファ">
+                </div>
+                <div class="product-slide__body">
+                  <p class="product-slide__title">アンティークソファ</p>
+                  <p class="product-slide__subtitle">France</p>
+                </div>
+              </a>
+            </div>
+
+            <!-- ③ -->
+            <div class="swiper-slide product-slide">
+              <a href="#">
+                <div class="product-slide__image">
+                  <img src="./assets/images/common/products-item03.jpg" alt="チェア">
+                </div>
+                <div class="product-slide__body">
+                  <p class="product-slide__title">アンティークチェア</p>
+                  <p class="product-slide__subtitle">Italia</p>
+                </div>
+              </a>
+            </div>
+
           </div>
+
+          <!-- ▼ 矢印ボタン（Figmaにある丸アイコン） -->
+          <div class="top-products__slider-buttons">
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+
+          <!-- ▼ ページネーション（必要なら） -->
+          <!-- <div class="swiper-pagination"></div> -->
+
         </div>
       </div>
     </section>
@@ -333,7 +385,6 @@
             <img src="./assets/images/common/products-item01.jpg" alt="アンティークソファ" width="165" height="110">
           </div>
           <div class="product-card__body">
-            <div class="product-card__dot"></div>
             <p class="product-card__title">アンティークソファ</p>
             <p class="product-card__subtitle">Italia</p>
             <p class="product-card__text">

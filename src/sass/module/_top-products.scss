@@ -3,7 +3,11 @@
 // 商品（TOPページ）
 
 .top-products {
-
+  margin-top: rem(81);
+  margin-left: rem(-15);
+  @include mq(md) {
+    margin-top: rem(100);
+  }
 }
 
 .top-products__inner {
@@ -41,23 +45,63 @@
 }
 
 
+// 商品スライダー
+
 
 .top-products__slider {
 
 }
 
-.top-products__slider-item {
+.swiper-container {
   width: 100%;
-  aspect-ratio: 264 / 176;
+  height: rem(318);
   @include mq(md) {
-    aspect-ratio: 375 / 250;
+    height: rem(306);
   }
+}
+
+.swiper-wrapper {
+width: 100%;
+height: 100%;
+}
+
+.swiper-slide {
+width: 100%;
+height: 100%;
+}
+
+.swiper-slide a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide__image {
 
 }
 
-.top-products__slider-item img {
+.swiper-slide__image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
+
+
+
+
+
+
+// .top-products__slider-item {
+//   width: 100%;
+//   aspect-ratio: 264 / 176;
+//   @include mq(md) {
+//     aspect-ratio: 375 / 250;
+//   }
+// }
+
+// .top-products__slider-item img {
+//   width: 100%;
+//   height: 100%;
+//   object-fit: cover;
+// }
 
