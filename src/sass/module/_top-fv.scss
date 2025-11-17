@@ -92,5 +92,12 @@
 
 // 最新ニュースカード（TOPページ）
 .top-fv__news {
-
+  margin-left: rem(-15);
+  @include mq(md) {
+    // margin: 0 calc(50% - 50vw);
+    // width: 100vw;
+    width: calc(900 / 1440 * 100vw);  // ← 62.5vwになる
+    margin-right: auto;
+    margin-left: calc(50% - 50vw);   // ← 画面左端に合わせる万能式
+  }
 }

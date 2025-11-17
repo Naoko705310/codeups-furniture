@@ -867,6 +867,10 @@ body.is-fixed {
 	width: 100%;
 }
 
+.top-fv__news {
+	margin-left: -0.9375rem;
+}
+
 .top-philosophy__content {
 	margin-top: 2.625rem;
 }
@@ -1179,6 +1183,12 @@ html {
 
 .top-fv__image {
 	aspect-ratio: 1260/480;
+}
+
+.top-fv__news {
+	margin-left: calc(50% - 50vw);
+	margin-right: auto;
+	width: 62.5vw;
 }
 
 .top-philosophy__content {
