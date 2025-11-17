@@ -39,7 +39,7 @@
     width: 100vw;
     margin-left: calc(50% - 50vw);
     margin-top: rem(40);
-    overflow: hidden;
+    overflow: hidden;//画像のはみ出し防止
   }
 }
 

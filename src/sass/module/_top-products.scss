@@ -7,11 +7,13 @@
   margin-left: rem(-15);
   @include mq(md) {
     margin-top: rem(100);
+
   }
 }
 
 .top-products__inner {
-
+  position: relative;
+  padding-bottom: rem(199);
 }
 
 .top-products__content {
@@ -20,8 +22,11 @@
   background-position: center;
   background-repeat: no-repeat;
   padding: rem(47) rem(15) rem(49) rem(15);
+  margin-left: rem(-15);
   @include mq(md) {
     padding: rem(40) rem(42) rem(140) rem(180);
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
   }
 }
 
@@ -55,6 +60,9 @@
   margin-top: rem(39);
   @include mq(md) {
     margin-top: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
   }
 }
 

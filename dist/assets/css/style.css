@@ -1034,11 +1034,17 @@ body.is-fixed {
 	margin-top: 5.0625rem;
 }
 
+.top-products__inner {
+	padding-bottom: 12.4375rem;
+	position: relative;
+}
+
 .top-products__content {
 	background-image: url(../images/common/top-products-bg.png);
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
+	margin-left: -0.9375rem;
 	padding: 2.9375rem 0.9375rem 3.0625rem 0.9375rem;
 }
 
@@ -1403,7 +1409,9 @@ html {
 }
 
 .top-products__content {
+	margin-left: calc(50% - 50vw);
 	padding: 2.5rem 2.625rem 8.75rem 11.25rem;
+	width: 100vw;
 }
 
 .top-products__description {
@@ -1415,7 +1423,10 @@ html {
 }
 
 .top-products__slider {
+	bottom: 0;
+	left: 0;
 	margin-top: 0;
+	position: absolute;
 }
 
 .top-works {
