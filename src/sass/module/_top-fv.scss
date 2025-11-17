@@ -35,10 +35,11 @@
   margin-right: rem(-15);
   @include mq(md) {
     display: grid;
-    grid-template-columns: rem(180) 1fr;
-    margin: 0 calc(50% - 50vw);
+    grid-template-columns: 12.5% 1fr;
     width: 100vw;
+    margin-left: calc(50% - 50vw);
     margin-top: rem(40);
+    overflow: hidden;
   }
 }
 

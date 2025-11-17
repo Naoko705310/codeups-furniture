@@ -1331,9 +1331,10 @@ html {
 
 .top-fv__image-wrapper {
 	display: grid;
-	grid-template-columns: 11.25rem 1fr;
-	margin: 0 calc(50% - 50vw);
+	grid-template-columns: 12.5% 1fr;
+	margin-left: calc(50% - 50vw);
 	margin-top: 2.5rem;
+	overflow: hidden;
 	width: 100vw;
 }
 
