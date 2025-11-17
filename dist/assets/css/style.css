@@ -871,6 +871,27 @@ body.is-fixed {
 	margin-left: -0.9375rem;
 }
 
+.top-philosophy {
+	overflow: hidden;
+	padding-bottom: 2.5rem;
+	padding-top: 3rem;
+	position: relative;
+}
+
+.top-philosophy::before {
+	background-image: url(../images/common/top-philosophy-bg.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	content: "";
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 17.0666666667vw;
+	z-index: -1;
+}
+
 .top-philosophy__content {
 	margin-top: 2.625rem;
 }
@@ -894,10 +915,20 @@ body.is-fixed {
 
 .top-philosophy__button {
 	margin-top: 2.375rem;
+	text-align: right;
 }
 
 .top-philosophy__image {
+	aspect-ratio: 345/190;
 	margin-top: 2.5rem;
+	width: 100%;
+}
+
+.top-philosophy__image img {
+	-o-object-fit: cover;
+	height: 100%;
+	object-fit: cover;
+	width: 100%;
 }
 
 .top-products__content {
@@ -1199,8 +1230,27 @@ html {
 	width: 62.5vw;
 }
 
+.top-philosophy {
+	padding-bottom: 0;
+	padding-top: 7.5rem;
+}
+
+.top-philosophy::before {
+	width: 18.0555555556vw;
+}
+
+.top-philosophy__inner {
+	grid-gap: 2.875rem;
+	align-items: end;
+	display: grid;
+	gap: 2.875rem;
+	grid-template-columns: 1fr 35.25rem;
+	justify-content: space-between;
+}
+
 .top-philosophy__content {
 	margin-top: 5rem;
+	padding-bottom: 1.5625rem;
 }
 
 .top-philosophy__main-copy {
@@ -1216,6 +1266,7 @@ html {
 }
 
 .top-philosophy__image {
+	aspect-ratio: 564/310;
 	margin-top: 0;
 }
 
