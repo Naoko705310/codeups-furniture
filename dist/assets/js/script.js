@@ -23,4 +23,31 @@ jQuery(function ($) {
       $('body').removeClass('is-fixed');
     });
   });
+
+  /* --------------------------------------------
+  /* TOPページ 商品スライド
+  /* -------------------------------------------- */
+
+  // const productsSwiper = new Swiper('.top-products__slider', {
+  //   loop: true,
+
+  //   // ▼ SP（375px）で 3枚表示
+  //   slidesPerView: 1.35,
+  //   centeredSlides: true,  // ← 真ん中を基準にする
+  //   spaceBetween: 23,      // ← カンプのgap指定
+
+  //   navigation: {
+  //     nextEl: '.swiper-button-next',
+  //     prevEl: '.swiper-button-prev'
+  //   },
+
+  //   breakpoints: {
+  //     // ▼ PC（768px〜）
+  //     768: {
+  //       slidesPerView: 3,   // PCは 3 枚 FULL 表示
+  //       centeredSlides: false,
+  //       spaceBetween: 32,
+  //     }
+  //   }
+  // });
 });

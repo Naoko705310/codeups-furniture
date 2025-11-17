@@ -45,63 +45,24 @@
 }
 
 
-// 商品スライダー
-
+/* ====================================
+   Swiper 本体
+==================================== */
 
 .top-products__slider {
-
-}
-
-.swiper-container {
   width: 100%;
-  height: rem(318);
+  overflow: hidden; // ← 必須
+  margin-top: rem(39);
   @include mq(md) {
-    height: rem(306);
+    margin-top: 0;
   }
 }
 
 .swiper-wrapper {
-width: 100%;
-height: 100%;
-}
-
-.swiper-slide {
-width: 100%;
-height: 100%;
-}
-
-.swiper-slide a {
-  display: block;
   width: 100%;
   height: 100%;
 }
 
-.swiper-slide__image {
-
-}
-
-.swiper-slide__image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
 
 
-
-
-
-
-// .top-products__slider-item {
-//   width: 100%;
-//   aspect-ratio: 264 / 176;
-//   @include mq(md) {
-//     aspect-ratio: 375 / 250;
-//   }
-// }
-
-// .top-products__slider-item img {
-//   width: 100%;
-//   height: 100%;
-//   object-fit: cover;
-// }
 

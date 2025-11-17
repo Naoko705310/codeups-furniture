@@ -35,8 +35,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
   
     <!-- CSS -->
-    <link rel="stylesheet" href="./assets/css/style.css?v=251112_1331">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css?v=251112_1331"/>
+    <link rel="stylesheet" href="./assets/css/style.css?v=251112_1331">
   
     <!-- JavaScript -->
     <script defer src="https://code.jquery.com/jquery-3.7.1.min.js"
@@ -206,27 +206,36 @@
     <!-- 商品 -->
     <section class="top-products">
       <div class="top-products__inner inner">
+
+        <!-- 商品セクションの説明ブロック -->
         <div class="top-products__content">
+
           <!-- セクションタイトル -->
           <h2 class="section-title">
             <span class="section-title__en">Products</span>
             <span class="section-title__ja">商品紹介</span>
           </h2>
+
           <p class="top-products__description">
             新しい季節のトレンドを反映した洗練されたインテリアアイテムが多く揃っています。<br>
             シンプルで個性的なデザインと上質な素材が魅力です。リビングからベッドルームまで、あらゆるスペースに調和するアイテムを取り揃えていますのでおしゃれな空間を作りたい方にぴったりの一品を見つけてください。
           </p>
-          <!-- ボタン -->
+
+          <!-- VIEW MORE ボタン -->
           <div class="top-products__button">
             <a href="#" class="button">view more</a>
           </div>
+
         </div>
-        <!-- ▼ スライダー本体 ------------------------------- -->
+
+        <!-- ▼━━━━━━━━━━━━━━━━━━━━━━━ -->
+        <!--  商品スライダー -->
+        <!-- ━━━━━━━━━━━━━━━━━━━━━━━━▼ -->
         <div class="top-products__slider swiper">
 
           <div class="swiper-wrapper">
 
-            <!-- ①スライド -->
+            <!-- ① -->
             <div class="swiper-slide product-slide">
               <a href="#">
                 <div class="product-slide__image">
@@ -243,7 +252,7 @@
             <div class="swiper-slide product-slide">
               <a href="#">
                 <div class="product-slide__image">
-                  <img src="./assets/images/common/products-item02.jpg" alt="ソファ">
+                  <img src="./assets/images/common/products-item02.jpg" alt="アンティークソファ">
                 </div>
                 <div class="product-slide__body">
                   <p class="product-slide__title">アンティークソファ</p>
@@ -256,7 +265,7 @@
             <div class="swiper-slide product-slide">
               <a href="#">
                 <div class="product-slide__image">
-                  <img src="./assets/images/common/products-item03.jpg" alt="チェア">
+                  <img src="./assets/images/common/products-item03.jpg" alt="アンティークチェア">
                 </div>
                 <div class="product-slide__body">
                   <p class="product-slide__title">アンティークチェア</p>
@@ -267,18 +276,20 @@
 
           </div>
 
-          <!-- ▼ 矢印ボタン（Figmaにある丸アイコン） -->
-          <div class="top-products__slider-buttons">
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-          </div>
-
-          <!-- ▼ ページネーション（必要なら） -->
+          <!-- ページネーション（必要なら） -->
           <!-- <div class="swiper-pagination"></div> -->
 
         </div>
+        <!-- ▲━━━━━━━━━━━━━━━━━━━━━━━ -->
+        <!-- スライダー矢印（Figmaの丸矢印を当てる予定） -->
+        <div class="top-products__slider-buttons">
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
       </div>
     </section>
+
+
     <!-- Works -->
     <section class="top-works">
       <div class="top-works__inner inner">

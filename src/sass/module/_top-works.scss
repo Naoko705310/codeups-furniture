@@ -3,7 +3,10 @@
 // インテリアコーディネート（TOPページ）
 
 .top-works {
-
+  margin-top: rem(80);
+  @include mq(md) {
+    margin-top: rem(85);
+  }
 }
 
 .top-works__content {

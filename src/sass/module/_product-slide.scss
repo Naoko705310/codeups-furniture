@@ -3,7 +3,14 @@
 // トップページの商品スライド
 
 .product-slide {
+  height: rem(318);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 
+  @include mq(md) {
+    height: rem(306);
+  }
 }
 
 .product-slide__image {
@@ -61,19 +68,46 @@
   line-height: 1.5;
 }
 
-.top-products__slider-buttons {
+// ======================================================
+//   ▼ スライドボタン（スライダーの外に出した版）
+// ======================================================
 
+.top-products__slider-buttons {
+  display: flex;
+  justify-content: center;
+  gap: rem(32);
+  margin-top: rem(16);
+
+  @include mq(md) {
+    margin-top: rem(24);
+    gap: rem(52);
+  }
 }
 
-.swiper-button-prev {
+.top-products__slider-buttons .swiper-button-prev,
+.top-products__slider-buttons .swiper-button-next {
+  position: static !important;
+  width: rem(46) !important;
+  height: rem(46) !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  cursor: pointer;
+}
 
+/* デフォルト矢印を確実に消す */
+.swiper-button-prev::after,
+.swiper-button-prev::before,
+.swiper-button-next::after,
+.swiper-button-next::before {
+  display: none !important;
+}
+
+/* ▼ 画像指定 */
+.swiper-button-prev {
+  background-image: url("../images/common/slide-button-left.png") !important;
 }
 
 .swiper-button-next {
-
+  background-image: url("../images/common/slide-button-right.png") !important;
 }
-
-.swiper-pagination {
-
-}
-

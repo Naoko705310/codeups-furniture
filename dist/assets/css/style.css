@@ -777,6 +777,13 @@ body.is-fixed {
 	margin-top: 0.5rem;
 }
 
+.product-slide {
+	display: flex;
+	flex-direction: column;
+	height: 19.875rem;
+	overflow: hidden;
+}
+
 .product-slide__image {
 	aspect-ratio: 264/176;
 	box-shadow: 0.25rem 0.25rem 0.5rem 0rem rgba(0, 0, 0, 0.25);
@@ -825,6 +832,47 @@ body.is-fixed {
 	font-size: 0.875rem;
 	font-weight: 400;
 	line-height: 1.5;
+}
+
+.top-products__slider-buttons {
+	display: flex;
+	gap: 2rem;
+	justify-content: center;
+	margin-top: 1rem;
+}
+
+.top-products__slider-buttons .swiper-button-prev,
+.top-products__slider-buttons .swiper-button-next {
+	background-position: center !important;
+	background-repeat: no-repeat !important;
+	background-size: contain !important;
+	height: 2.875rem !important;
+	position: static !important;
+	width: 2.875rem !important;
+}
+
+.top-products__slider-buttons .swiper-button-prev,
+.top-products__slider-buttons .swiper-button-next {
+	cursor: pointer;
+}
+
+/* デフォルト矢印を確実に消す */
+
+.swiper-button-prev::after,
+.swiper-button-prev::before,
+.swiper-button-next::after,
+.swiper-button-next::before {
+	display: none !important;
+}
+
+/* ▼ 画像指定 */
+
+.swiper-button-prev {
+	background-image: url("../images/common/slide-button-left.png") !important;
+}
+
+.swiper-button-next {
+	background-image: url("../images/common/slide-button-right.png") !important;
 }
 
 .section-title {
@@ -1007,8 +1055,13 @@ body.is-fixed {
 	margin-top: 3.25rem;
 }
 
-.swiper-container {
-	height: 19.875rem;
+/* ====================================
+   Swiper 本体
+==================================== */
+
+.top-products__slider {
+	margin-top: 2.4375rem;
+	overflow: hidden;
 	width: 100%;
 }
 
@@ -1017,22 +1070,8 @@ body.is-fixed {
 	width: 100%;
 }
 
-.swiper-slide {
-	height: 100%;
-	width: 100%;
-}
-
-.swiper-slide a {
-	display: block;
-	height: 100%;
-	width: 100%;
-}
-
-.swiper-slide__image img {
-	-o-object-fit: cover;
-	height: 100%;
-	object-fit: cover;
-	width: 100%;
+.top-works {
+	margin-top: 5rem;
 }
 
 .top-works__description {
@@ -1239,12 +1278,21 @@ html {
 	margin-top: 1rem;
 }
 
+.product-slide {
+	height: 19.125rem;
+}
+
 .product-slide__image {
 	aspect-ratio: 375/250;
 }
 
 .product-slide__body {
 	padding: 1.5rem 0.9375rem 2.625rem 0.9375rem;
+}
+
+.top-products__slider-buttons {
+	gap: 3.25rem;
+	margin-top: 1.5rem;
 }
 
 .section-title__en {
@@ -1365,8 +1413,12 @@ html {
 	margin-top: 2.25rem;
 }
 
-.swiper-container {
-	height: 19.125rem;
+.top-products__slider {
+	margin-top: 0;
+}
+
+.top-works {
+	margin-top: 5.3125rem;
 }
 
 .top-works__description {
