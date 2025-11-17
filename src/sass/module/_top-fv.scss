@@ -14,6 +14,7 @@
 }
 
 .top-fv__content {
+  margin-top: rem(59);
 
 }
 
@@ -28,23 +29,28 @@
   }
 }
 
-.top-fv__image {
-  // width: rem(360);
-  aspect-ratio: 360 / 270;
+// 画像とSNSアイコン
+.top-fv__image-wrapper {
+  margin-top: rem(40);
+  margin-right: rem(-15);
   @include mq(md) {
-    // width: rem(1260);
-    // aspect-ratio: 1260 / 480;
+    display: grid;
+    grid-template-columns: rem(180) 1fr;
+    margin: 0 calc(50% - 50vw);
+    width: 100vw;
+    margin-top: rem(40);
   }
 }
 
-.top-fv__image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
+// SNSアイコン
 .top-fv__sns {
-
+  display: none;
+  @include mq(md) {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: rem(112);
+  }
 }
 
 .sns-items__items {
@@ -66,6 +72,23 @@
 .sns-item__link {
 
 }
+
+// 画像
+.top-fv__image {
+  width: 100%;
+  aspect-ratio: 360 / 270;
+  @include mq(md) {
+    aspect-ratio: 1260 / 480;
+  }
+}
+
+.top-fv__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
 
 // 最新ニュースカード（TOPページ）
 .top-fv__news {

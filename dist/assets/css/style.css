@@ -834,6 +834,10 @@ body.is-fixed {
 	width: 100%;
 }
 
+.top-fv__content {
+	margin-top: 3.6875rem;
+}
+
 .top-fv__copy {
 	color: #151515;
 	font-family: "Cormorant Garamond", serif;
@@ -842,8 +846,18 @@ body.is-fixed {
 	line-height: 1;
 }
 
+.top-fv__image-wrapper {
+	margin-right: -0.9375rem;
+	margin-top: 2.5rem;
+}
+
+.top-fv__sns {
+	display: none;
+}
+
 .top-fv__image {
 	aspect-ratio: 360/270;
+	width: 100%;
 }
 
 .top-fv__image img {
@@ -1146,6 +1160,25 @@ html {
 
 .top-fv__copy {
 	font-size: 4rem;
+}
+
+.top-fv__image-wrapper {
+	display: grid;
+	grid-template-columns: 11.25rem 1fr;
+	margin: 0 calc(50% - 50vw);
+	margin-top: 2.5rem;
+	width: 100vw;
+}
+
+.top-fv__sns {
+	align-items: flex-end;
+	display: flex;
+	justify-content: center;
+	padding-bottom: 7rem;
+}
+
+.top-fv__image {
+	aspect-ratio: 1260/480;
 }
 
 .top-philosophy__content {
