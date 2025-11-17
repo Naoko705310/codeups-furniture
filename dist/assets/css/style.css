@@ -903,6 +903,18 @@ body.is-fixed {
 	margin-top: 3.25rem;
 }
 
+.top-products__slider-item {
+	aspect-ratio: 264/176;
+	width: 100%;
+}
+
+.top-products__slider-item img {
+	-o-object-fit: cover;
+	height: 100%;
+	object-fit: cover;
+	width: 100%;
+}
+
 .top-works__description {
 	color: #151515;
 	font-family: "Noto Serif JP", sans-serif;
@@ -1166,6 +1178,10 @@ html {
 
 .top-philosophy__button {
 	margin-top: 2.25rem;
+}
+
+.top-products__slider-item {
+	aspect-ratio: 375/250;
 }
 
 .top-works__description {
