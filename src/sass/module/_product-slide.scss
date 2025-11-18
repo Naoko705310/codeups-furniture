@@ -3,13 +3,13 @@
 // トップページの商品スライド
 
 .product-slide {
-  height: rem(318);
+  // height: rem(318);
   display: flex;
   flex-direction: column;
   overflow: hidden;
 
   @include mq(md) {
-    height: rem(306);
+    // height: rem(306);
   }
 }
 
@@ -73,14 +73,24 @@
 // ======================================================
 
 .top-products__slider-buttons {
+  min-height: rem(46);
   display: flex;
   justify-content: center;
   gap: rem(32);
   margin-top: rem(16);
+  align-items: center;  // ★ 横だけでなく縦も中央に揃える
+  height: rem(46);      // ★ 高さを明示すること
 
   @include mq(md) {
-    margin-top: rem(24);
-    gap: rem(52);
+    // margin-top: rem(24);
+    // gap: rem(52);
+
+    position: absolute;
+    top: rem(40);                // ★ 説明ブロックの余白に合わせて調整
+    right: rem(42);              // ★ background の padding と揃えている
+    margin: 0;                   // 下マージン不要
+    gap: rem(24);                // カンプは132px → 約46*2 + GAP 約40px
+    z-index: 2;                  // スライダーより上に重ねる
   }
 }
 

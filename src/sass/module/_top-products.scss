@@ -4,7 +4,6 @@
 
 .top-products {
   margin-top: rem(81);
-  margin-left: rem(-15);
   @include mq(md) {
     margin-top: rem(100);
 
@@ -24,9 +23,13 @@
   padding: rem(47) rem(15) rem(49) rem(15);
   margin-left: rem(-15);
   @include mq(md) {
-    padding: rem(40) rem(42) rem(140) rem(180);
+    // ★ innerの制約を無視して左端にくっつける 
     width: 100vw;
     margin-left: calc(50% - 50vw);
+    // ★ 背景の「見え幅」を 1088px に合わせる 
+    max-width: calc(1088 / 1440 * 100vw); // ← 75.55vw
+    margin-right: auto;
+    padding: rem(40) rem(42) rem(140) rem(180);
   }
 }
 
