@@ -836,46 +836,16 @@ body.is-fixed {
 .top-products__slider-buttons {
 	align-items: center;
 	display: flex;
-	gap: 2rem;
-	height: 2.875rem;
+	gap: 4rem;
 	justify-content: center;
 	margin-top: 1rem;
 	min-height: 2.875rem;
-}
-
-.top-products__slider-buttons .swiper-button-prev,
-.top-products__slider-buttons .swiper-button-next {
-	background-position: center !important;
-	background-repeat: no-repeat !important;
-	background-size: contain !important;
-	height: 2.875rem !important;
-	position: static !important;
-	width: 2.875rem !important;
-}
-
-.top-products__slider-buttons .swiper-button-prev,
-.top-products__slider-buttons .swiper-button-next {
-	cursor: pointer;
+	position: relative;
 }
 
 /* デフォルト矢印を確実に消す */
 
-.swiper-button-prev::after,
-.swiper-button-prev::before,
-.swiper-button-next::after,
-.swiper-button-next::before {
-	display: none !important;
-}
-
 /* ▼ 画像指定 */
-
-.swiper-button-prev {
-	background-image: url("../images/common/slide-button-left.png") !important;
-}
-
-.swiper-button-next {
-	background-image: url("../images/common/slide-button-right.png") !important;
-}
 
 .section-title {
 	display: inline-block;
@@ -1036,7 +1006,6 @@ body.is-fixed {
 }
 
 .top-products__inner {
-	padding-bottom: 12.4375rem;
 	position: relative;
 }
 
@@ -1062,9 +1031,9 @@ body.is-fixed {
 	margin-top: 3.25rem;
 }
 
-/* ====================================
-   Swiper 本体
-==================================== */
+/* --------------------------------------------
+/* Swiper 本体
+/* -------------------------------------------- */
 
 .top-products__slider {
 	margin-top: 2.4375rem;
@@ -1143,6 +1112,7 @@ html {
 }
 
 .cta-item--company {
+	border-right: none;
 	margin: 1.5rem 0;
 	padding-bottom: 5rem;
 	padding-right: 20.4166666667%;
@@ -1294,12 +1264,8 @@ html {
 }
 
 .top-products__slider-buttons {
-	gap: 1.5rem;
-	margin: 0;
-	position: absolute;
-	right: 2.625rem;
-	top: 2.5rem;
-	z-index: 2;
+	gap: 2.5rem;
+	margin-top: 0;
 }
 
 .section-title__en {
@@ -1413,7 +1379,7 @@ html {
 	margin-left: calc(50% - 50vw);
 	margin-right: auto;
 	max-width: 75.5555555556vw;
-	padding: 2.5rem 2.625rem 8.75rem 11.25rem;
+	padding: 2.0625rem 2.625rem 9.1875rem 11.25rem;
 	width: 100vw;
 }
 
@@ -1426,10 +1392,7 @@ html {
 }
 
 .top-products__slider {
-	bottom: 0;
-	left: 0;
-	margin-top: 0;
-	position: absolute;
+	margin-top: -6.6875rem;
 }
 
 .top-works {

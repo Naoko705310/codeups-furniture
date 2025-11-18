@@ -6,13 +6,12 @@
   margin-top: rem(81);
   @include mq(md) {
     margin-top: rem(100);
-
   }
 }
 
 .top-products__inner {
   position: relative;
-  padding-bottom: rem(199);
+  // padding-bottom: rem(199);
 }
 
 .top-products__content {
@@ -22,14 +21,12 @@
   background-repeat: no-repeat;
   padding: rem(47) rem(15) rem(49) rem(15);
   margin-left: rem(-15);
-  @include mq(md) {
-    // ★ innerの制約を無視して左端にくっつける 
+  @include mq(md) { 
     width: 100vw;
     margin-left: calc(50% - 50vw);
-    // ★ 背景の「見え幅」を 1088px に合わせる 
     max-width: calc(1088 / 1440 * 100vw); // ← 75.55vw
     margin-right: auto;
-    padding: rem(40) rem(42) rem(140) rem(180);
+    padding: rem(33) rem(42) rem(147) rem(180);
   }
 }
 
@@ -52,20 +49,16 @@
   }
 }
 
-
-/* ====================================
-   Swiper 本体
-==================================== */
+/* --------------------------------------------
+/* Swiper 本体
+/* -------------------------------------------- */
 
 .top-products__slider {
   width: 100%;
   overflow: hidden; // ← 必須
   margin-top: rem(39);
   @include mq(md) {
-    margin-top: 0;
-    position: absolute;
-    bottom: 0;
-    left: 0;
+    margin-top: rem(-107);
   }
 }
 

@@ -3,14 +3,9 @@
 // トップページの商品スライド
 
 .product-slide {
-  // height: rem(318);
   display: flex;
   flex-direction: column;
   overflow: hidden;
-
-  @include mq(md) {
-    // height: rem(306);
-  }
 }
 
 .product-slide__image {
@@ -74,35 +69,44 @@
 
 .top-products__slider-buttons {
   min-height: rem(46);
-  display: flex;
-  justify-content: center;
-  gap: rem(32);
   margin-top: rem(16);
-  align-items: center;  // ★ 横だけでなく縦も中央に揃える
-  height: rem(46);      // ★ 高さを明示すること
+  position: relative;
+  display: flex;
+  gap: rem(64);
+  justify-content: center; 
+  align-items: center;
+  @include mq(md) {
+    margin-top: 0;
+    gap: rem(40);
+  }
+  // min-height: rem(46);
+  // display: flex;
+  // justify-content: center;
+  // gap: rem(32);
+  // margin-top: rem(16);
+  // align-items: center;  // ★ 横だけでなく縦も中央に揃える
+  // height: rem(46);      // ★ 高さを明示すること
 
   @include mq(md) {
-    // margin-top: rem(24);
-    // gap: rem(52);
 
-    position: absolute;
-    top: rem(40);                // ★ 説明ブロックの余白に合わせて調整
-    right: rem(42);              // ★ background の padding と揃えている
-    margin: 0;                   // 下マージン不要
-    gap: rem(24);                // カンプは132px → 約46*2 + GAP 約40px
-    z-index: 2;                  // スライダーより上に重ねる
+    // position: absolute;
+    // top: rem(40);                // ★ 説明ブロックの余白に合わせて調整
+    // right: rem(42);              // ★ background の padding と揃えている
+    // margin: 0;                   // 下マージン不要
+    // gap: rem(24);                // カンプは132px → 約46*2 + GAP 約40px
+    // z-index: 2;                  // スライダーより上に重ねる
   }
 }
 
 .top-products__slider-buttons .swiper-button-prev,
 .top-products__slider-buttons .swiper-button-next {
-  position: static !important;
-  width: rem(46) !important;
-  height: rem(46) !important;
-  background-size: contain !important;
-  background-repeat: no-repeat !important;
-  background-position: center !important;
-  cursor: pointer;
+  // position: static !important;
+  // width: rem(46) !important;
+  // height: rem(46) !important;
+  // background-size: contain !important;
+  // background-repeat: no-repeat !important;
+  // background-position: center !important;
+  // cursor: pointer;
 }
 
 /* デフォルト矢印を確実に消す */
@@ -110,14 +114,14 @@
 .swiper-button-prev::before,
 .swiper-button-next::after,
 .swiper-button-next::before {
-  display: none !important;
+  // display: none !important;
 }
 
 /* ▼ 画像指定 */
 .swiper-button-prev {
-  background-image: url("../images/common/slide-button-left.png") !important;
+  // background-image: url("../images/common/slide-button-left.png") !important;
 }
 
 .swiper-button-next {
-  background-image: url("../images/common/slide-button-right.png") !important;
+  // background-image: url("../images/common/slide-button-right.png") !important;
 }
