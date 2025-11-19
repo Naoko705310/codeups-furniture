@@ -885,6 +885,10 @@ body.is-fixed {
 	width: 5rem;
 }
 
+.sns-block {
+	display: none;
+}
+
 .sns-item {
 	aspect-ratio: 24/24;
 	height: 1.5rem;
@@ -917,6 +921,32 @@ body.is-fixed {
 	margin-top: 2.5rem;
 }
 
+.sub-fv__image-wrapper {
+	margin-top: 2.5rem;
+}
+
+.sub-fv__sns {
+	grid-column: 1; /* 1. 1frカラムの右端 (画像側) に要素を寄せる */
+	justify-self: end; /* 2. 画像との間に余白（例: 20px）を設定 */
+	padding-right: 1.25rem;
+}
+
+.sub-fv__sns.sns-block {
+	padding-bottom: 0;
+}
+
+.sub-fv__image {
+	aspect-ratio: 345/259;
+	width: 100%;
+}
+
+.sub-fv__image img {
+	-o-object-fit: cover;
+	height: 100%;
+	object-fit: cover;
+	width: 100%;
+}
+
 .top-fv__content {
 	margin-top: 3.6875rem;
 }
@@ -932,10 +962,6 @@ body.is-fixed {
 .top-fv__image-wrapper {
 	margin-right: -0.9375rem;
 	margin-top: 2.5rem;
-}
-
-.top-fv__sns {
-	display: none;
 }
 
 .top-fv__image {
@@ -1303,6 +1329,13 @@ html {
 	font-size: 4rem;
 }
 
+.sns-block {
+	align-items: flex-end;
+	display: flex;
+	justify-content: center;
+	padding-bottom: 7rem;
+}
+
 .sns-items {
 	grid-gap: 1.5rem;
 	display: grid;
@@ -1328,6 +1361,20 @@ html {
 	font-size: 4rem;
 }
 
+.sub-fv__image-wrapper {
+	align-items: end;
+	display: grid;
+	grid-template-columns: 1fr 67.5rem 1fr;
+	margin-left: calc(50% - 50vw);
+	width: 100vw;
+}
+
+.sub-fv__image {
+	aspect-ratio: 1080/480; /* grid-column-start: 2; と同じ意味 */
+	grid-column: 2;
+	width: 100%;
+}
+
 .top-fv__content {
 	padding-bottom: 8.875rem;
 	position: relative;
@@ -1344,13 +1391,6 @@ html {
 	margin-top: 2.5rem;
 	overflow: hidden;
 	width: 100vw;
-}
-
-.top-fv__sns {
-	align-items: flex-end;
-	display: flex;
-	justify-content: center;
-	padding-bottom: 7rem;
 }
 
 .top-fv__image {

@@ -4,14 +4,6 @@
 
 }
 
-.sub-fv__inner {
-
-}
-
-.inner {
-
-}
-
 .sub-fv__page-title {
   font-family: $second-font-family;
   font-size: rem(40);
@@ -29,34 +21,41 @@
 }
 
 .sub-fv__image-wrapper {
-
+  margin-top: rem(40);
+  @include mq(md) {
+    display: grid;
+    grid-template-columns: 1fr rem(1080) 1fr;
+    align-items: end;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+  }
 }
 
 .sub-fv__sns {
-
+  grid-column: 1; 
+  /* 1. 1frカラムの右端 (画像側) に要素を寄せる */
+  justify-self: end; 
+  /* 2. 画像との間に余白（例: 20px）を設定 */
+  padding-right: rem(20);
+}
+.sub-fv__sns.sns-block {
+  padding-bottom: 0;
 }
 
-.sns-items__items {
-
-}
-
-.sns-items {
-
-}
-
-.sns-items__item {
-
-}
-
-.sns-item {
-
-}
-
-.sns-item__link {
-
-}
 
 .sub-fv__image {
-
+  width: 100%;
+  aspect-ratio: 345/259;
+  @include mq(md) {
+    aspect-ratio: 1080/480;
+    /* grid-column-start: 2; と同じ意味 */
+    grid-column: 2; 
+    width: 100%;
+  }
 }
 
+.sub-fv__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
