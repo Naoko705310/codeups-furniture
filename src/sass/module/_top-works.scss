@@ -10,7 +10,25 @@
 }
 
 .top-works__content {
+  position: relative;
+}
 
+// 背景帯
+.top-works__content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(64 / 375 * 100vw); // ← 背景帯の幅
+  height: 100%;                
+  background-image: url(../images/common/top-philosophy-bg.png);
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+  @include mq(md) {
+    width: calc(260 / 1440 * 100vw); // ← 背景帯の幅
+  }       
 }
 
 .top-works__description {

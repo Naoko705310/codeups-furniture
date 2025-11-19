@@ -1050,6 +1050,24 @@ body.is-fixed {
 	margin-top: 5rem;
 }
 
+.top-works__content {
+	position: relative;
+}
+
+.top-works__content::before {
+	background-image: url(../images/common/top-philosophy-bg.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	content: "";
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 17.0666666667vw;
+	z-index: -1;
+}
+
 .top-works__description {
 	color: #151515;
 	font-family: "Noto Serif JP", sans-serif;
@@ -1397,6 +1415,10 @@ html {
 
 .top-works {
 	margin-top: 5.3125rem;
+}
+
+.top-works__content::before {
+	width: 18.0555555556vw;
 }
 
 .top-works__description {
