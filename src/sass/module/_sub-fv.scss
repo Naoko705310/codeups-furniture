@@ -1,0 +1,62 @@
+@use "global" as *;
+
+.sub-fv {
+
+}
+
+.sub-fv__inner {
+
+}
+
+.inner {
+
+}
+
+.sub-fv__page-title {
+  font-family: $second-font-family;
+  font-size: rem(40);
+  color: $color-font;
+  font-weight: $normal;
+  line-height: 1.5;
+  text-align: center;
+  @include mq(md) {
+    font-size: rem(64);
+  }
+}
+
+.sub-fv__content {
+  margin-top: rem(40);
+}
+
+.sub-fv__image-wrapper {
+
+}
+
+.sub-fv__sns {
+
+}
+
+.sns-items__items {
+
+}
+
+.sns-items {
+
+}
+
+.sns-items__item {
+
+}
+
+.sns-item {
+
+}
+
+.sns-item__link {
+
+}
+
+.sub-fv__image {
+
+}
+

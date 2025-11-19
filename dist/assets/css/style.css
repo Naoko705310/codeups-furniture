@@ -904,6 +904,19 @@ body.is-fixed {
 	width: 100%;
 }
 
+.sub-fv__page-title {
+	color: #151515;
+	font-family: "Cormorant Garamond", serif;
+	font-size: 2.5rem;
+	font-weight: 400;
+	line-height: 1.5;
+	text-align: center;
+}
+
+.sub-fv__content {
+	margin-top: 2.5rem;
+}
+
 .top-fv__content {
 	margin-top: 3.6875rem;
 }
@@ -1309,6 +1322,10 @@ html {
 	top: 0;
 	transform: translateX(-50%);
 	width: 1px;
+}
+
+.sub-fv__page-title {
+	font-size: 4rem;
 }
 
 .top-fv__content {
