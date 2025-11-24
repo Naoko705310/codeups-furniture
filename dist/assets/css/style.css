@@ -231,10 +231,18 @@ input[type=checkbox]:focus + label {
 
 .page-about__philosophy {
 	margin-top: 3rem;
+}
+
+.page-about__cta {
+	margin-top: 5rem;
+}
+
+.about-philosophy {
+	padding-bottom: 2.5rem;
 	position: relative;
 }
 
-.page-about__philosophy::before {
+.about-philosophy::before {
 	background-image: url(../images/common/top-philosophy-bg.png);
 	background-position: center;
 	background-repeat: no-repeat;
@@ -250,6 +258,7 @@ input[type=checkbox]:focus + label {
 
 .about-philosophy__inner {
 	grid-gap: 3.75rem;
+	align-items: end;
 	display: grid;
 	gap: 3.75rem;
 	grid-template-columns: 1fr;
@@ -284,6 +293,47 @@ input[type=checkbox]:focus + label {
 	-o-object-fit: cover;
 	height: 100%;
 	object-fit: cover;
+	width: 100%;
+}
+
+.about-world {
+	padding-bottom: 2.5rem;
+	padding-top: 2.5rem;
+	position: relative;
+}
+
+.about-world::before {
+	background-image: url(../images/common/about-world-bg.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	content: "";
+	height: 100%;
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 100%;
+	z-index: -1;
+}
+
+.about-world__content-wrapper {
+	grid-gap: 2.5rem;
+	align-items: start;
+	display: grid;
+	gap: 2.5rem;
+	grid-template-columns: 1fr;
+}
+
+.about-world__image {
+	aspect-ratio: 345/192;
+	width: 100%;
+}
+
+.about-world__image img {
+	-o-object-fit: contain;
+	height: 100%;
+	object-fit: contain;
 	width: 100%;
 }
 
@@ -911,11 +961,13 @@ body.is-fixed {
 
 .section-title__en {
 	color: #151515;
+	display: block;
 	font-family: "Cormorant Garamond", serif;
 	font-size: 2.5rem;
 	font-weight: 400;
 	line-height: 1;
 	text-align: left;
+	width: 100%;
 }
 
 .section-title__ja {
@@ -1213,18 +1265,26 @@ html {
 	font-size: 1.4814814815vw;
 }
 
-.page-about__philosophy {
-	padding-bottom: 8.8125rem;
+.page-about__cta {
+	margin-top: 7.5rem;
+}
+
+.about-philosophy {
+	padding-bottom: 8.125rem;
 	padding-top: 5.75rem;
 }
 
-.page-about__philosophy::before {
+.about-philosophy::before {
 	width: 18.0555555556vw;
 }
 
 .about-philosophy__inner {
 	gap: 9.6875rem;
 	grid-template-columns: 1fr 1fr;
+}
+
+.about-philosophy__content-wrapper {
+	margin-bottom: 0.6875rem;
 }
 
 .about-philosophy__main-copy {
@@ -1241,6 +1301,20 @@ html {
 	margin-left: 0;
 	margin-top: 0;
 	max-width: 28.4375rem;
+}
+
+.about-world {
+	padding-bottom: 5rem;
+	padding-top: 5rem;
+}
+
+.about-world__content-wrapper {
+	gap: 1rem;
+	grid-template-columns: 15.125rem 1fr;
+}
+
+.about-world__image {
+	aspect-ratio: 822/458;
 }
 
 .button {

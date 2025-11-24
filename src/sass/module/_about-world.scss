@@ -1,0 +1,60 @@
+@use "global" as *;
+
+.about-world {
+  position: relative;
+  padding-top: rem(40);
+  padding-bottom: rem(40);
+  @include mq(md) {
+    padding-top: rem(80);
+    padding-bottom: rem(80);
+  }
+}
+
+.about-world::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%; 
+  height: 100%;                
+  background-image: url(../images/common/about-world-bg.jpg);
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+  @include mq(md) {
+
+  } 
+}
+
+.about-world__inner {
+
+}
+
+.about-world__content-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: start;
+  gap: rem(40);
+  @include mq(md) {
+    grid-template-columns: rem(242) 1fr;
+    gap: rem(16);
+  }
+}
+
+.about-world__image {
+  width: 100%;
+  aspect-ratio: 345 / 192;
+  @include mq(md) {
+    aspect-ratio: 822 / 458;
+  }
+}
+
+.about-world__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+

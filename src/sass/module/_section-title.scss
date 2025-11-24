@@ -7,6 +7,8 @@
 }
 
 .section-title__en {
+  display: block;
+  width: 100%;
   font-family: $second-font-family;
   font-size: rem(40);
   color: $color-font;

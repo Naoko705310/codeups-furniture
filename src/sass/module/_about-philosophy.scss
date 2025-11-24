@@ -1,15 +1,15 @@
 @use "global" as *;
 
-.page-about__philosophy {
+.about-philosophy {
   position: relative;
-  margin-top: rem(48);
+  padding-bottom: rem(40);
   @include mq(md) {
     padding-top: rem(92);
-    padding-bottom: rem(141);
+    padding-bottom: rem(130);
   }
 }
 
-.page-about__philosophy::before {
+.about-philosophy::before {
   content: "";
   position: absolute;
   top: 0;
@@ -30,6 +30,7 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: rem(60);
+  align-items: end;
   @include mq(md) {
     grid-template-columns: 1fr 1fr;
     gap: rem(155);
@@ -37,7 +38,9 @@
 }
 
 .about-philosophy__content-wrapper {
-
+  @include mq(md) {
+    margin-bottom: rem(11);
+  }
 }
 
 

@@ -1,0 +1,17 @@
+@use "global" as *;
+
+.page-about__philosophy {
+  margin-top: rem(48);
+}
+
+.page-about__from-the-world {
+
+}
+
+.page-about__cta {
+  margin-top: rem(80);
+  @include mq(md) {
+    margin-top: rem(120);
+  }
+
+}
