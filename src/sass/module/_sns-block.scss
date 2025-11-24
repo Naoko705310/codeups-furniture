@@ -4,6 +4,7 @@
 .sns-block {
   display: none;
   @include mq(md) {
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: flex-end;

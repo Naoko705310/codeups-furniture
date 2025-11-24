@@ -24,19 +24,24 @@
   margin-top: rem(40);
   @include mq(md) {
     display: grid;
+    // grid-template-columns: minmax(0, rem(180)) rem(1080) minmax(0, rem(180));
     grid-template-columns: 1fr rem(1080) 1fr;
     align-items: end;
     width: 100vw;
     margin-left: calc(50% - 50vw);
+    // max-width: rem(1440);
   }
 }
 
 .sub-fv__sns {
   grid-column: 1; 
   /* 1. 1frカラムの右端 (画像側) に要素を寄せる */
-  justify-self: end; 
+  justify-self: center; 
   /* 2. 画像との間に余白（例: 20px）を設定 */
-  padding-right: rem(20);
+  // padding-right: rem(20);
+  @include mq(md) {
+    max-width: rem(180);
+  }
 }
 .sub-fv__sns.sns-block {
   padding-bottom: 0;
