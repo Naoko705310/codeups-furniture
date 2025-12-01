@@ -973,6 +973,20 @@ body.is-fixed {
 
 /* ▼ 画像指定 */
 
+.products-list__items {
+	margin-top: 3rem;
+}
+
+.product-list__title-item {
+	grid-column: 1/3;
+}
+
+.products-list__title-wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+
 .products-list__description {
 	color: #151515;
 	font-family: "Noto Serif JP", sans-serif;
@@ -980,10 +994,6 @@ body.is-fixed {
 	font-weight: 400;
 	line-height: 1.5;
 	margin-top: 1rem;
-}
-
-.products-list__items {
-	margin-top: 3rem;
 }
 
 .section-title {
@@ -1526,12 +1536,21 @@ html {
 	margin-top: 0;
 }
 
-.products-list__description {
-	margin-top: 5rem;
-}
-
 .products-list__items {
 	margin-top: 0;
+}
+
+.product-list__title-item {
+	align-self: start;
+	grid-column: 1/2;
+}
+
+.products-list__title-wrapper {
+	padding: 2.625rem 1.5rem 6.25rem 1.5rem;
+}
+
+.products-list__description {
+	margin-top: 5rem;
 }
 
 .section-title__en {
