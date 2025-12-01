@@ -237,6 +237,10 @@ input[type=checkbox]:focus + label {
 	margin-top: 5rem;
 }
 
+.page-products__products-list {
+	margin-top: 3rem;
+}
+
 .about-philosophy {
 	padding-bottom: 2.5rem;
 	position: relative;
@@ -826,6 +830,12 @@ body.is-fixed {
 	margin-top: 0.25rem;
 }
 
+.product-card {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
 .product-card__image {
 	aspect-ratio: 165/110;
 	width: 100%;
@@ -841,9 +851,10 @@ body.is-fixed {
 .product-card__body {
 	background-color: #fafafa;
 	display: flex;
+	flex: 1;
 	flex-direction: column;
-	justify-content: space-between;
-	padding: 0.75rem 0.5rem 1rem 0.5rem;
+	justify-content: flex-start;
+	padding: 0.75rem 0.4375rem 1rem 0.5rem;
 }
 
 .product-card__title {
@@ -883,6 +894,13 @@ body.is-fixed {
 	font-weight: 400;
 	line-height: 1.5;
 	margin-top: 0.5rem;
+}
+
+.product-cards {
+	grid-gap: 0.9375rem;
+	display: grid;
+	gap: 0.9375rem;
+	grid-template-columns: repeat(2, 1fr);
 }
 
 .product-slide {
@@ -954,6 +972,19 @@ body.is-fixed {
 /* デフォルト矢印を確実に消す */
 
 /* ▼ 画像指定 */
+
+.products-list__description {
+	color: #151515;
+	font-family: "Noto Serif JP", sans-serif;
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.5;
+	margin-top: 1rem;
+}
+
+.products-list__items {
+	margin-top: 3rem;
+}
 
 .section-title {
 	display: inline-block;
@@ -1269,6 +1300,10 @@ html {
 	margin-top: 7.5rem;
 }
 
+.page-products__products-list {
+	margin-top: 7.5rem;
+}
+
 .about-philosophy {
 	padding-bottom: 8.125rem;
 	padding-top: 5.75rem;
@@ -1473,6 +1508,11 @@ html {
 	margin-top: 1rem;
 }
 
+.product-cards {
+	gap: 0;
+	grid-template-columns: repeat(4, 1fr);
+}
+
 .product-slide__image {
 	aspect-ratio: 375/250;
 }
@@ -1483,6 +1523,14 @@ html {
 
 .top-products__slider-buttons {
 	gap: 2.5rem;
+	margin-top: 0;
+}
+
+.products-list__description {
+	margin-top: 5rem;
+}
+
+.products-list__items {
 	margin-top: 0;
 }
 

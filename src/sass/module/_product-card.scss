@@ -2,6 +2,12 @@
 
 // Productカード
 
+.product-card {
+  display: flex;
+  flex-direction: column;  // 画像→本文の縦配置
+  height: 100%;            // grid/flex内で高さ自動揃え
+}
+
 .product-card__image {
   width: 100%;
   aspect-ratio: 165 / 110;
@@ -20,9 +26,10 @@
 .product-card__body {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  flex: 1;
+  justify-content: flex-start;
   background-color: #fafafa;
-  padding: rem(12) rem(8) rem(16) rem(8);
+  padding: rem(12) rem(7) rem(16) rem(8);
   @include mq(md) {
     padding: rem(24) rem(15) rem(42) rem(15);
   }
