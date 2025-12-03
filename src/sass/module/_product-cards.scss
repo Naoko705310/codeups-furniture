@@ -1,5 +1,6 @@
 @use "global" as *;
 
+// 商品カード群
 .product-cards {
   display: grid;
   grid-template-columns: repeat(2, 1fr);

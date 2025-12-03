@@ -13,6 +13,7 @@
 .product-list__title-item {
   // スマホ版：1行目の1列目と2列目を埋める
   grid-column: 1 / 3; 
+  margin-bottom: rem(48 - 15);//gridのgap分を引いている
   @include mq(md) {
     // PC版：1行目の1列目のみ
     grid-column: 1 / 2;
