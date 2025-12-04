@@ -904,6 +904,66 @@ body.is-fixed {
 	margin-top: 0.25rem;
 }
 
+.news-list__pagination {
+	margin-top: 5rem;
+	text-align: center;
+}
+
+.pagination__items {
+	align-items: center;
+	display: inline-flex;
+	gap: 1rem;
+}
+
+.pagination__item.pagination__item--prev {
+	margin-right: 2rem;
+}
+
+.pagination__item.pagination__item--next {
+	margin-left: 2rem;
+}
+
+.pagination__link {
+	align-items: center;
+	color: #151515;
+	display: inline-flex;
+	font-family: "Noto Serif JP", sans-serif;
+	font-size: 1.125rem;
+	font-weight: 400;
+	height: 2.125rem;
+	justify-content: center;
+	line-height: 1.5;
+	width: 2.125rem;
+}
+
+.pagination__arrow {
+	height: auto;
+	width: 1.125rem;
+}
+
+.pagination__link--current {
+	align-items: center;
+	background-color: #6F8471;
+	color: #ffffff;
+	display: inline-flex;
+	font-family: "Noto Serif JP", sans-serif;
+	font-size: 1.125rem;
+	font-weight: 400;
+	height: 2.125rem;
+	justify-content: center;
+	line-height: 1.5;
+	width: 2.125rem;
+}
+
+.pagination__item--dots {
+	margin-left: 1rem;
+}
+
+.pagination__dots {
+	color: #151515;
+	font-size: 1.125rem;
+}
+
 .product-card {
 	display: flex;
 	flex-direction: column;

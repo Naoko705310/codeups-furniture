@@ -1,0 +1,10 @@
+@use "global" as *;
+
+
+
+
+// ページネーション外枠
+.news-list__pagination {
+  margin-top: rem(80);
+  text-align: center;
+}

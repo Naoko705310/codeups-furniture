@@ -1,0 +1,65 @@
+@use "global" as *;
+
+// ページネーション
+
+// UL
+.pagination__items {
+  display: inline-flex;
+  align-items: center;
+  gap: rem(16);
+}
+
+// 前へ（左矢印）
+.pagination__item.pagination__item--prev {
+  margin-right: rem(32);
+}
+
+// 次へ（右矢印）
+.pagination__item.pagination__item--next {
+  margin-left: rem(32);
+}
+
+// 数字/矢印の共通リンク
+.pagination__link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: rem(34);
+  height: rem(34);
+  font-family: $base-font-family;
+  font-size: rem(18);
+  color: $black;
+  font-weight: $normal;
+  line-height: 1.5;
+}
+
+// SVG矢印
+.pagination__arrow {
+  width: rem(18);
+  height: auto;
+}
+
+// 現在ページ（背景色緑）
+.pagination__link--current {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: rem(34);
+  height: rem(34);
+  background-color: $color-main;
+  font-family: $base-font-family;
+  font-size: rem(18);
+  color: $white;
+  font-weight: $normal;
+  line-height: 1.5;
+}
+
+// dot（…）
+.pagination__item--dots {
+  margin-left: rem(16);
+}
+
+.pagination__dots {
+  font-size: rem(18);
+  color: $black;
+}
