@@ -246,6 +246,10 @@ input[type=checkbox]:focus + label {
 	margin-top: 2.5rem;
 }
 
+.page-news__news-list {
+	margin-top: 3rem;
+}
+
 .page-products__products-list {
 	margin-top: 3rem;
 }
@@ -904,6 +908,13 @@ body.is-fixed {
 	margin-top: 0.25rem;
 }
 
+.news-cards {
+	grid-gap: 1.5rem;
+	display: grid;
+	gap: 1.5rem;
+	grid-template-columns: repeat(1, 1fr);
+}
+
 .news-list__pagination {
 	margin-top: 5rem;
 	text-align: center;
@@ -1550,6 +1561,10 @@ html {
 	margin-top: 7.5rem;
 }
 
+.page-news__news-list {
+	margin-top: 7.5rem;
+}
+
 .page-products__products-list {
 	margin-top: 7.5rem;
 }
@@ -1773,6 +1788,11 @@ html {
 
 .news-card-latest__button {
 	margin-top: 2.1875rem;
+}
+
+.news-cards {
+	gap: 2.5rem 1.875rem;
+	grid-template-columns: repeat(3, 1fr);
 }
 
 .product-card__image {
