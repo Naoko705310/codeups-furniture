@@ -1,9 +1,12 @@
 @use "global" as *;
 
-.company-info {
-}
-
-.company-info__inner {
+// PCの時は幅700pxまで
+.company-info__inner.inner {
+  @include mq(md) {
+    max-width: rem(750);
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
 
 // 一覧全体
@@ -21,9 +24,10 @@
   padding: rem(24) 0;
   border-bottom: 1px solid $color-gray;
   @include mq(md) {
-    display: flex;
-    align-items: flex-start;
+    grid-template-columns: 19.428% 1fr;
+    gap: rem(24);
     padding: rem(40) 0;
+    padding-left: rem(40);
   }
 }
 
