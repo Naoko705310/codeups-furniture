@@ -1,0 +1,36 @@
+@use "global" as *;
+
+// アクセス
+
+.access__description {
+  font-family: $base-font-family;
+  font-size: rem(16);
+  color: #000000;
+  font-weight: $normal;
+  line-height: 1.5;
+  margin-top: rem(16);
+  @include mq(md) {
+    margin-top: rem(50);
+  }
+}
+
+// 地図
+.access__map {
+  margin-top: rem(20);
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 345 / 200;
+  @include mq(md) {
+    aspect-ratio: 1080 / 354;
+  }
+}
+
+.access__map img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: 345 / 200;
+  @include mq(md) {
+    aspect-ratio: 1080 / 354;
+  }
+}

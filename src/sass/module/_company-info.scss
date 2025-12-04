@@ -1,5 +1,7 @@
 @use "global" as *;
 
+// 会社概要
+
 // PCの時は幅700pxまで
 .company-info__inner.inner {
   @include mq(md) {

@@ -1,9 +1,17 @@
 @use "global" as *;
 
-// Company section
+// 会社概要
+
 .page-company__company-info {
   margin-top: rem(48);
   background-color: $white;
+  @include mq(md) {
+    margin-top: rem(120);
+  }
+}
+
+.page-company__access {
+  margin-top: rem(40);
   @include mq(md) {
     margin-top: rem(120);
   }
