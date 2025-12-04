@@ -1,0 +1,56 @@
+@use "global" as *;
+
+.company-info {
+}
+
+.company-info__inner {
+}
+
+// 一覧全体
+.company-info__list {
+  border-top: 1px solid $color-gray;
+}
+
+// 各行
+.company-info__item {
+  display: grid;
+  grid-template-columns: 27.826% 1fr;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: rem(16);
+  padding: rem(24) 0;
+  border-bottom: 1px solid $color-gray;
+  @include mq(md) {
+    display: flex;
+    align-items: flex-start;
+    padding: rem(40) 0;
+  }
+}
+
+// 見出し（会社名・所在地など）
+.company-info__term {
+  font-family: $base-font-family;
+  font-size: rem(16);
+  color: #000000;
+  font-weight: $normal;
+  line-height: 1.5;
+}
+
+// 内容
+.company-info__desc {
+  font-family: $base-font-family;
+  font-size: rem(16);
+  color: #000000;
+  font-weight: $normal;
+  line-height: 1.5;
+}
+
+// 連絡先1行分（TELと番号横並び）
+.company-info__contact {
+  display: flex;
+  align-items: baseline;
+  gap: rem(16);
+}
+
+
+

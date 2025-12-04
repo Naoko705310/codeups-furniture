@@ -1,0 +1,10 @@
+@use "global" as *;
+
+// Company section
+.page-company__company-info {
+  margin-top: rem(48);
+  background-color: $white;
+  @include mq(md) {
+    margin-top: rem(120);
+  }
+}
