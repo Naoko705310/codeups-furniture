@@ -63,3 +63,12 @@
   font-size: rem(18);
   color: $black;
 }
+
+// 一覧に戻る（テキスト用）
+.pagination__link--back-to-list {
+  width: auto;
+  height: auto;
+  padding: 0;         // 必要なら調整
+  font-size: rem(14); // 好みで調整
+  line-height: 1;
+}

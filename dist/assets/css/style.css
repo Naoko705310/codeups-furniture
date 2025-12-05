@@ -246,6 +246,14 @@ input[type=checkbox]:focus + label {
 	margin-top: 2.5rem;
 }
 
+.page-news-details__fv {
+	margin-top: 3.6875rem;
+}
+
+.page-news-details__article {
+	margin-top: 2.5rem;
+}
+
 .page-news__news-list {
 	margin-top: 3rem;
 }
@@ -797,6 +805,69 @@ body.is-fixed {
 	width: 100%;
 }
 
+.news-article__header {
+	text-align: center;
+}
+
+.news-article__title {
+	display: none;
+}
+
+.news-article__date {
+	display: none;
+}
+
+.news-article__eyecatch {
+	aspect-ratio: 345/259;
+	border-bottom: 1px solid #EEEEEE;
+	padding-bottom: 1.5rem;
+	width: 100%;
+}
+
+.news-article__eyecatch img {
+	-o-object-fit: cover;
+	height: 100%;
+	object-fit: cover;
+	width: 100%;
+}
+
+.news-article__content {
+	color: #151515;
+	font-family: "Noto Serif JP", sans-serif;
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.5;
+	margin-top: 1.5rem;
+}
+
+.news-article__content p {
+	margin-top: 1.5rem;
+}
+
+.news-article__content ul {
+	list-style: disc;
+	margin-top: 1.5rem;
+	padding-left: 1.25rem;
+}
+
+.news-article__image {
+	aspect-ratio: 345/231;
+	margin-top: 2.5rem;
+	width: 100%;
+}
+
+.news-article__image img {
+	-o-object-fit: cover;
+	height: 100%;
+	object-fit: cover;
+	width: 100%;
+}
+
+.news-article__pagination {
+	margin-top: 2.5rem;
+	text-align: center;
+}
+
 .news-card-latest {
 	background-color: rgba(21, 21, 21, 0.9);
 	padding: 1.5rem 1rem;
@@ -973,6 +1044,14 @@ body.is-fixed {
 .pagination__dots {
 	color: #151515;
 	font-size: 1.125rem;
+}
+
+.pagination__link--back-to-list {
+	font-size: 0.875rem;
+	height: auto;
+	line-height: 1;
+	padding: 0;
+	width: auto;
 }
 
 .product-card {
@@ -1561,6 +1640,10 @@ html {
 	margin-top: 7.5rem;
 }
 
+.page-news-details__fv {
+	display: none;
+}
+
 .page-news__news-list {
 	margin-top: 7.5rem;
 }
@@ -1776,6 +1859,45 @@ html {
 	max-width: 1130px;
 	padding-left: 25px;
 	padding-right: 25px;
+}
+
+.news-article__title {
+	color: #151515;
+	display: block;
+	font-family: "Noto Serif JP", sans-serif;
+	font-size: 2rem;
+	font-weight: 400;
+	line-height: 1.5;
+}
+
+.news-article__date {
+	color: #151515;
+	display: block;
+	font-family: "Noto Serif JP", sans-serif;
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.5;
+}
+
+.news-article__eyecatch {
+	aspect-ratio: 700/468;
+	padding-bottom: 2.5rem;
+}
+
+.news-article__content {
+	margin-top: 2.5rem;
+}
+
+.news-article__content ul {
+	margin-top: 2.5rem;
+}
+
+.news-article__image {
+	aspect-ratio: 700/468;
+}
+
+.news-article__pagination {
+	margin-top: 5rem;
 }
 
 .news-card-latest {
