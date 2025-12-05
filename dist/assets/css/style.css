@@ -254,6 +254,14 @@ input[type=checkbox]:focus + label {
 	margin-top: 2.5rem;
 }
 
+.page-news-details__products {
+	margin-top: 5rem;
+}
+
+.page-news-details__new-post {
+	margin-top: 5rem;
+}
+
 .page-news__news-list {
 	margin-top: 3rem;
 }
@@ -805,6 +813,14 @@ body.is-fixed {
 	width: 100%;
 }
 
+.new-post__inner {
+	position: relative;
+}
+
+.new-post__slider {
+	margin-top: 2.5rem;
+}
+
 .news-article__header {
 	text-align: center;
 }
@@ -1215,6 +1231,49 @@ body.is-fixed {
 	font-weight: 400;
 	line-height: 1.5;
 	margin-top: 1rem;
+}
+
+.recommend-products__slider {
+	margin-top: 2.5rem;
+	overflow: visible;
+}
+
+.recommend-products__slider .swiper {
+	overflow: visible;
+}
+
+.recommend-products__slider .swiper-wrapper {
+	margin-top: 0rem;
+}
+
+.recommend-products__slider .swiper-slide {
+	flex-shrink: 0;
+	width: 16.5rem;
+}
+
+.recommend-products__buttons {
+	align-items: center;
+	display: flex;
+	gap: 4rem;
+	justify-content: center;
+	margin: 2.5rem auto 0;
+	min-height: 2.875rem;
+	position: relative;
+	width: 9.75rem;
+}
+
+.recommend-products__prev,
+.recommend-products__next {
+	height: 2.875rem;
+	width: 2.875rem;
+}
+
+.recommend-products__prev img,
+.recommend-products__next img {
+	-o-object-fit: contain;
+	height: 100%;
+	object-fit: contain;
+	width: 100%;
 }
 
 .section-title {
@@ -1959,6 +2018,15 @@ html {
 
 .products-list__description {
 	margin-top: 5rem;
+}
+
+.recommend-products__slider .swiper-slide {
+	width: 23.4375rem;
+}
+
+.recommend-products__buttons {
+	gap: 2.5rem;
+	width: 8.25rem;
 }
 
 .section-title__en {

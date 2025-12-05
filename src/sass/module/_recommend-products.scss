@@ -1,8 +1,6 @@
 @use "global" as *;
 
-.page-news-details__products {
-
-}
+// おすすめ商品
 
 .recommend-products {
 
@@ -12,63 +10,64 @@
 
 }
 
-.inner {
-
-}
-
-.section-title {
-
-}
 
 .recommend-products__title {
 
 }
 
-.section-title__en {
 
-}
 
-.section-title__ja {
-
-}
-
+// おすすめ商品スライダー
 .recommend-products__slider {
-
+  margin-top: rem(40);
+  overflow: visible; // 見切れスライド表示
 }
 
-.swiper {
-
+.recommend-products__slider .swiper {
+  overflow: visible;
 }
 
-.swiper-wrapper {
-
+.recommend-products__slider .swiper-wrapper {
+  margin-top: rem(0);
 }
 
-.swiper-slide {
-
+// おすすめ商品スライド本体
+.recommend-products__slider .swiper-slide {
+  width: rem(264);
+  // height: rem(232);
+  flex-shrink: 0;
+  @include mq(md) {
+    width: rem(375);
+    // height: rem(306);
+  }
 }
 
-.recommend-products__pagination {
 
+// ナビゲーション矢印
+.recommend-products__buttons {
+  width: rem(156);
+  min-height: rem(46);
+  position: relative; // ナビゲーション矢印の配置
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: rem(64);
+  margin: rem(40) auto 0;
+  @include mq(md) {
+    width: rem(132);
+    gap: rem(40);
+  }
 }
 
-.swiper-pagination {
-
-}
-
-.recommend-products__prev {
-
-}
-
-.swiper-button-prev {
-
-}
-
+.recommend-products__prev,
 .recommend-products__next {
-
+  width: rem(46);
+  height: rem(46);
 }
 
-.swiper-button-next {
-
+.recommend-products__prev img,
+.recommend-products__next img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
-

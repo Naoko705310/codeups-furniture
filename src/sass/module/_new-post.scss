@@ -9,7 +9,7 @@
 }
 
 .new-post__inner {
-
+  position: relative; // ナビゲーション矢印の配置
 }
 
 .inner {
@@ -24,16 +24,10 @@
 
 }
 
-.section-title__en {
 
-}
-
-.section-title__ja {
-
-}
-
+// 最新ニューススライダー
 .new-post__slider {
-
+  margin-top: rem(40);
 }
 
 .swiper {
