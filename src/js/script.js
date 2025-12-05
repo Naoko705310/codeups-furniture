@@ -35,8 +35,8 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     spaceBetween: 23,      // ← カンプのgap指定
   
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev'
+      nextEl: '.top-products__next',
+      prevEl: '.top-products__prev'
     },
   
     breakpoints: {
@@ -49,6 +49,33 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     }
   });
   
+  // ニュース詳細：Recommend
+  const recommendSlider = new Swiper('.recommend-products__slider', {
+    slidesPerView: 2,
+    spaceBetween: 16,
+    navigation: {
+      nextEl: '.recommend-products__next',
+      prevEl: '.recommend-products__prev',
+    },
+    pagination: {
+      el: '.recommend-products__pagination',
+      clickable: true,
+    },
+  });
+
+  // ニュース詳細：New Post
+  const newPostSlider = new Swiper('.new-post__slider', {
+    slidesPerView: 1.2,
+    spaceBetween: 20,
+    navigation: {
+      nextEl: '.new-post__next',
+      prevEl: '.new-post__prev',
+    },
+    pagination: {
+      el: '.new-post__pagination',
+      clickable: true,
+    },
+  });
   
 
 

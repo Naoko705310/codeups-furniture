@@ -1,20 +1,6 @@
 @use "global" as *;
 
-.page-news-details__article {
-
-}
-
-.news-article {
-
-}
-
-.news-article__inner {
-
-}
-
-.inner {
-
-}
+// ニュース記事詳細
 
 .news-article__header {
 text-align: center;
@@ -102,43 +88,12 @@ text-align: center;
   object-fit: cover;
 }
 
+// 一覧に戻る
 .news-article__pagination {
   text-align: center;
   margin-top: rem(40);
   @include mq(md) {
     margin-top: rem(80);
   }
-}
-
-.pagination {
-
-}
-
-.pagination__items {
-
-}
-
-.pagination__item {
-
-}
-
-.pagination__item--prev {
-
-}
-
-.pagination__link {
-
-}
-
-.pagination__arrow {
-
-}
-
-.pagination__link--back-to-list {
-
-}
-
-.pagination__item--next {
-
 }
 
