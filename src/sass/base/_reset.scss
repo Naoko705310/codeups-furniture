@@ -161,12 +161,12 @@ label.required::after {
   font-size: 0.9em;
 }
 
-/* エラー状態は入力中にだけ強調 */
-input:invalid:focus,
-textarea:invalid:focus,
-select:invalid:focus {
-  border: 2px solid #e74c3c;
-}
+/* エラー状態は入力中にだけ強調 */ //※不要
+// input:invalid:focus,
+// textarea:invalid:focus,
+// select:invalid:focus {
+//   border: 2px solid #e74c3c;
+// }
 
 /* ラジオ・チェックボックスは視覚的に隠すが、スクリーンリーダーでは有効 */
 input[type="radio"],
@@ -209,3 +209,19 @@ input[type="checkbox"]:focus + label {
     line-height: inherit;
   }
   
+  /* ==============================
+  フォームのブラウザ標準バリデーション装飾リセット
+  （フォーカスした時に勝手に赤枠をつけない）
+============================== */
+
+input:invalid,
+textarea:invalid,
+select:invalid {
+  box-shadow: none;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+}

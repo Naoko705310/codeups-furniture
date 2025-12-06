@@ -308,6 +308,22 @@
   border-bottom: 1px solid #5BC4FF;
 }
 
+// ==============================
+// ✅ フォーカス可視化（正しいHTML構造対応版）
+// ==============================
+
+// ラジオ：label内inputにフォーカスが入った時
+.contact-form__radio-label:has(.contact-form__radio:focus-visible)::before {
+  outline: 2px solid $color-main;
+  outline-offset: rem(3);
+}
+
+// チェックボックス：label内inputにフォーカスが入った時
+.contact-form__checkbox-label:has(.contact-form__checkbox:focus-visible)::before {
+  outline: 2px solid $color-main;
+  outline-offset: rem(3);
+}
+
 
 // ==============================
 // 送信エリア
@@ -340,3 +356,15 @@
   font-size: rem(12);
   margin-top: rem(8);
 }
+
+
+// ==============================
+// ✅ フォーカス時はすべて $color-main
+// ==============================
+
+.contact-form__input:focus,
+.contact-form__textarea:focus {
+  border: 1px solid $color-main;
+  outline: none;
+}
+

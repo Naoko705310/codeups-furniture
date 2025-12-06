@@ -199,12 +199,6 @@ label.required::after {
 
 /* エラー状態は入力中にだけ強調 */
 
-input:invalid:focus,
-textarea:invalid:focus,
-select:invalid:focus {
-	border: 2px solid #e74c3c;
-}
-
 /* ラジオ・チェックボックスは視覚的に隠すが、スクリーンリーダーでは有効 */
 
 input[type=radio],
@@ -246,6 +240,23 @@ legend {
 	line-height: inherit;
 	margin: 0;
 	padding: 0;
+}
+
+/* ==============================
+  フォームのブラウザ標準バリデーション装飾リセット
+  （フォーカスした時に勝手に赤枠をつけない）
+============================== */
+
+input:invalid,
+textarea:invalid,
+select:invalid {
+	box-shadow: none;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+	outline: none;
 }
 
 .page-about__philosophy {
@@ -685,6 +696,16 @@ legend {
 	display: inline;
 }
 
+.contact-form__radio-label:has(.contact-form__radio:focus-visible)::before {
+	outline: 2px solid #6F8471;
+	outline-offset: 0.1875rem;
+}
+
+.contact-form__checkbox-label:has(.contact-form__checkbox:focus-visible)::before {
+	outline: 2px solid #6F8471;
+	outline-offset: 0.1875rem;
+}
+
 .contact-form__button {
 	margin-top: 2.5rem;
 	text-align: center;
@@ -699,6 +720,12 @@ legend {
 	color: #ff0000;
 	font-size: 0.75rem;
 	margin-top: 0.5rem;
+}
+
+.contact-form__input:focus,
+.contact-form__textarea:focus {
+	border: 1px solid #6F8471;
+	outline: none;
 }
 
 .cta-item {
