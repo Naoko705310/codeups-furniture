@@ -51,31 +51,51 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
   
   // ニュース詳細：Recommend
   const recommendSlider = new Swiper('.recommend-products__slider', {
-    slidesPerView: 2,
-    spaceBetween: 16,
+    loop: true,
+    slidesPerView: 1.25,
+    centeredSlides: true,
+    spaceBetween: 24,
+  
     navigation: {
-      nextEl: '.recommend-products__next',
-      prevEl: '.recommend-products__prev',
+      // ★ ここを逆にする！
+      nextEl: '.recommend-products__prev', // ← ボタンで右へ進む
+      prevEl: '.recommend-products__next', // → ボタンで左へ戻る
     },
+  
     pagination: {
       el: '.recommend-products__pagination',
       clickable: true,
     },
+  
+    breakpoints: {
+      768: {
+        slidesPerView: 3,
+        centeredSlides: false,
+        spaceBetween: 24,
+      }
+    }
   });
+  
+
 
   // ニュース詳細：New Post
   const newPostSlider = new Swiper('.new-post__slider', {
-    slidesPerView: 1.2,
-    spaceBetween: 20,
+    loop: true,
+    slidesPerView: 1.25,
+    spaceBetween: 30,
+  
     navigation: {
-      nextEl: '.new-post__next',
-      prevEl: '.new-post__prev',
+      // ★ ここも逆にする！
+      nextEl: '.new-post__prev', // ← ボタンで右へ進む
+      prevEl: '.new-post__next', // → ボタンで左へ戻る
     },
+  
     pagination: {
       el: '.new-post__pagination',
       clickable: true,
     },
   });
+  
   
 
 

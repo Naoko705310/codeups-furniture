@@ -3,9 +3,10 @@
 // Productカード
 
 .product-card {
+  width: 100%;
+  height: 100%;            // grid/flex内で高さ自動揃え
   display: flex;
   flex-direction: column;  // 画像→本文の縦配置
-  height: 100%;            // grid/flex内で高さ自動揃え
 }
 
 .product-card__image {
