@@ -161,7 +161,7 @@ label.required::after {
   font-size: 0.9em;
 }
 
-/* エラー状態は入力中にだけ強調 */ //※不要
+/* エラー状態は入力中にだけ強調 */ //※不要。formのcssで対応
 // input:invalid:focus,
 // textarea:invalid:focus,
 // select:invalid:focus {
@@ -208,20 +208,3 @@ input[type="checkbox"]:focus + label {
     font-size: inherit;
     line-height: inherit;
   }
-  
-  /* ==============================
-  フォームのブラウザ標準バリデーション装飾リセット
-  （フォーカスした時に勝手に赤枠をつけない）
-============================== */
-
-input:invalid,
-textarea:invalid,
-select:invalid {
-  box-shadow: none;
-}
-
-input:focus,
-textarea:focus,
-select:focus {
-  outline: none;
-}
