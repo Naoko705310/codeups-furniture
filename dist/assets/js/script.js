@@ -93,6 +93,12 @@ jQuery(function ($) {
     pagination: {
       el: '.new-post__pagination',
       clickable: true
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 30
+      }
     }
   });
 });

@@ -2,6 +2,14 @@
 
 // ニュース記事詳細
 
+.news-article__inner.inner {
+  @include mq(md) {
+    max-width: rem(750);
+    margin-right: auto;
+    margin-left: auto; 
+  }
+}
+
 .news-article__header {
 text-align: center;
 }

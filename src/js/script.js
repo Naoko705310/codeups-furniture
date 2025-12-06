@@ -94,6 +94,12 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
       el: '.new-post__pagination',
       clickable: true,
     },
+    breakpoints: {
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      }
+    }
   });
   
   
