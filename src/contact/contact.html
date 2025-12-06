@@ -151,154 +151,157 @@
           </div>
         </div>
       </section>
-      <!-- お問い合わせフォーム -->
-      <form class="contact-form__form" action="#" method="post" novalidate>
-        <fieldset class="contact-form__group">
-          <legend class="contact-form__legend">お問い合わせフォーム</legend>
-      
-          <!-- お名前 -->
-          <div class="contact-form__field">
-            <label for="contact-name" class="contact-form__label">
-              お名前 <span class="contact-form__required" aria-hidden="true">※</span>
-            </label>
-            <input
-              type="text"
-              id="contact-name"
-              name="name"
-              class="contact-form__input"
-              required
-              placeholder="例：山田 太郎"
-              aria-required="true"
-            >
-            <span class="contact-form__error" aria-live="polite"></span>
-          </div>
-      
-          <!-- メールアドレス -->
-          <div class="contact-form__field">
-            <label for="contact-email" class="contact-form__label">
-              メールアドレス <span class="contact-form__required" aria-hidden="true">※</span>
-            </label>
-            <input
-              type="email"
-              id="contact-email"
-              name="email"
-              class="contact-form__input"
-              required
-              placeholder="example@example.com"
-              aria-required="true"
-            >
-            <span class="contact-form__error" aria-live="polite"></span>
-          </div>
-      
-          <!-- 電話番号 -->
-          <div class="contact-form__field">
-            <label for="contact-tel" class="contact-form__label">
-              電話番号
-            </label>
-            <input
-              type="tel"
-              id="contact-tel"
-              name="tel"
-              class="contact-form__input"
-              placeholder="例：090-1234-5678"
-            >
-            <span class="contact-form__error" aria-live="polite"></span>
-          </div>
-      
-          <!-- お問い合わせ項目（ラジオ） -->
-          <fieldset class="contact-form__field contact-form__field--radio">
-            <legend class="contact-form__label">
-              お問い合わせ項目 <span class="contact-form__required" aria-hidden="true">※</span>
-            </legend>
-      
-            <div class="contact-form__radio-group">
-              <label class="contact-form__radio-label">
+      <section class="page-contact__contact-form contact-form">
+        <div class="contact-form__inner inner">
+          <!-- お問い合わせフォーム -->
+          <form class="contact-form__form" action="#" method="post" novalidate>
+            <fieldset class="contact-form__group">
+          
+              <!-- お名前 -->
+              <div class="contact-form__field">
+                <label for="contact-name" class="contact-form__label">
+                  お名前 <span class="contact-form__required" aria-hidden="true">※</span>
+                </label>
                 <input
-                  type="radio"
-                  name="category"
-                  value="after-purchase"
-                  class="contact-form__radio"
+                  type="text"
+                  id="contact-name"
+                  name="name"
+                  class="contact-form__input"
                   required
+                  placeholder="例：山田 太郎"
+                  aria-required="true"
                 >
-                購入後のお問い合わせ
-              </label>
-      
-              <label class="contact-form__radio-label">
+                <span class="contact-form__error" aria-live="polite"></span>
+              </div>
+          
+              <!-- メールアドレス -->
+              <div class="contact-form__field">
+                <label for="contact-email" class="contact-form__label">
+                  メールアドレス <span class="contact-form__required" aria-hidden="true">※</span>
+                </label>
                 <input
-                  type="radio"
-                  name="category"
-                  value="product"
-                  class="contact-form__radio"
+                  type="email"
+                  id="contact-email"
+                  name="email"
+                  class="contact-form__input"
+                  required
+                  placeholder="example@example.com"
+                  aria-required="true"
                 >
-                商品について
-              </label>
-      
-              <label class="contact-form__radio-label">
+                <span class="contact-form__error" aria-live="polite"></span>
+              </div>
+          
+              <!-- 電話番号 -->
+              <div class="contact-form__field">
+                <label for="contact-tel" class="contact-form__label">
+                  電話番号
+                </label>
                 <input
-                  type="radio"
-                  name="category"
-                  value="furniture"
-                  class="contact-form__radio"
+                  type="tel"
+                  id="contact-tel"
+                  name="tel"
+                  class="contact-form__input"
+                  placeholder="例：090-1234-5678"
                 >
-                気になる家具について
-              </label>
-      
-              <label class="contact-form__radio-label">
-                <input
-                  type="radio"
-                  name="category"
-                  value="other"
-                  class="contact-form__radio"
-                >
-                その他のお問い合わせ
-              </label>
-            </div>
-      
-            <span class="contact-form__error" aria-live="polite"></span>
-          </fieldset>
-      
-          <!-- お問い合わせ内容 -->
-          <div class="contact-form__field">
-            <label for="contact-message" class="contact-form__label">
-              お問い合わせ内容 <span class="contact-form__required" aria-hidden="true">※</span>
-            </label>
-            <textarea
-              id="contact-message"
-              name="message"
-              class="contact-form__textarea"
-              rows="6"
-              required
-              placeholder="お問い合わせ内容をご入力ください"
-              aria-required="true"
-            ></textarea>
-            <span class="contact-form__error" aria-live="polite"></span>
-          </div>
-      
-          <!-- 個人情報同意（チェックボックス） -->
-          <div class="contact-form__field contact-form__field--checkbox">
-            <label class="contact-form__checkbox-label">
-              <input
-                type="checkbox"
-                name="privacy"
-                class="contact-form__checkbox"
-                required
-                aria-required="true"
-              >
-              個人情報の取り扱いに同意する
-              <span class="contact-form__required" aria-hidden="true">※</span>
-            </label>
-            <span class="contact-form__error" aria-live="polite"></span>
-          </div>
-      
-          <!-- 送信ボタン -->
-          <div class="contact-form__actions">
-            <button type="submit" class="contact-form__submit">
-              送信する
-            </button>
-          </div>
-      
-        </fieldset>
-      </form>
+                <span class="contact-form__error" aria-live="polite"></span>
+              </div>
+          
+              <!-- お問い合わせ項目（ラジオ） -->
+              <fieldset class="contact-form__field contact-form__field--radio">
+                <legend class="contact-form__label">
+                  お問い合わせ項目 <span class="contact-form__required" aria-hidden="true">※</span>
+                </legend>
+          
+                <div class="contact-form__radio-group">
+                  <label class="contact-form__radio-label">
+                    <input
+                      type="radio"
+                      name="category"
+                      value="after-purchase"
+                      class="contact-form__radio"
+                      required
+                    >
+                    購入後のお問い合わせ
+                  </label>
+          
+                  <label class="contact-form__radio-label">
+                    <input
+                      type="radio"
+                      name="category"
+                      value="product"
+                      class="contact-form__radio"
+                    >
+                    商品について
+                  </label>
+          
+                  <label class="contact-form__radio-label">
+                    <input
+                      type="radio"
+                      name="category"
+                      value="furniture"
+                      class="contact-form__radio"
+                    >
+                    気になる家具について
+                  </label>
+          
+                  <label class="contact-form__radio-label">
+                    <input
+                      type="radio"
+                      name="category"
+                      value="other"
+                      class="contact-form__radio"
+                    >
+                    その他のお問い合わせ
+                  </label>
+                </div>
+          
+                <span class="contact-form__error" aria-live="polite"></span>
+              </fieldset>
+          
+              <!-- お問い合わせ内容 -->
+              <div class="contact-form__field">
+                <label for="contact-message" class="contact-form__label">
+                  お問い合わせ内容 <span class="contact-form__required" aria-hidden="true">※</span>
+                </label>
+                <textarea
+                  id="contact-message"
+                  name="message"
+                  class="contact-form__textarea"
+                  rows="6"
+                  required
+                  placeholder="お問い合わせ内容をご入力ください"
+                  aria-required="true"
+                ></textarea>
+                <span class="contact-form__error" aria-live="polite"></span>
+              </div>
+          
+              <!-- 個人情報同意（チェックボックス） -->
+              <div class="contact-form__field contact-form__field--checkbox">
+                <label class="contact-form__checkbox-label">
+                  <input
+                    type="checkbox"
+                    name="privacy"
+                    class="contact-form__checkbox"
+                    required
+                    aria-required="true"
+                  >
+                  個人情報の取り扱いに同意する
+                  <span class="contact-form__required" aria-hidden="true">※</span>
+                </label>
+                <span class="contact-form__error" aria-live="polite"></span>
+              </div>
+          
+              <!-- 送信ボタン -->
+              <div class="contact-form__button">
+                <button type="submit" class="contact-form__submit button">
+                  送信する
+                </button>
+              </div>
+          
+            </fieldset>
+          </form>
+        </div>
+      </section>
       
 
       <!-- CTAコンテンツ -->

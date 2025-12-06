@@ -229,6 +229,25 @@ input[type=checkbox]:focus + label {
 	outline-offset: 2px;
 }
 
+/* ============================================
+   fieldset / legend リセット（フォーム枠の完全解除）
+   ============================================ */
+
+fieldset {
+	border: 0;
+	margin: 0;
+	min-width: 0; /* Firefoxの横ズレ防止 */
+	padding: 0;
+}
+
+legend {
+	font-size: inherit;
+	font-weight: inherit;
+	line-height: inherit;
+	margin: 0;
+	padding: 0;
+}
+
 .page-about__philosophy {
 	margin-top: 3rem;
 }
@@ -302,7 +321,7 @@ input[type=checkbox]:focus + label {
 }
 
 .about-philosophy__main-copy {
-	color: #151515;
+	color: #000000;
 	font-family: "Noto Serif JP", sans-serif;
 	font-size: 2rem;
 	font-weight: 400;
@@ -311,7 +330,7 @@ input[type=checkbox]:focus + label {
 }
 
 .about-philosophy__description {
-	color: #151515;
+	color: #000000;
 	font-family: "Noto Serif JP", sans-serif;
 	font-size: 1rem;
 	font-weight: 400;
@@ -401,7 +420,7 @@ input[type=checkbox]:focus + label {
 .button {
 	-webkit-text-decoration: none;
 	border: 1px solid #6F8471;
-	color: #151515;
+	color: #000000;
 	display: inline-block;
 	font-family: "Cormorant Garamond", serif;
 	font-size: 1rem;
@@ -477,6 +496,115 @@ input[type=checkbox]:focus + label {
 	gap: 1rem;
 }
 
+.contact-form__form {
+	margin-top: 3rem;
+	width: 100%;
+}
+
+.contact-form__field {
+	margin-top: 2.5rem;
+}
+
+.contact-form__label {
+	color: #000000;
+	display: inline-block;
+	font-family: "Noto Serif JP", sans-serif;
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.5;
+}
+
+.contact-form__required {
+	color: #ff0000;
+	margin-left: 0.25rem;
+	width: 0.75rem;
+}
+
+.contact-form__input {
+	background-color: #fafafa;
+	color: #000000;
+	font-family: "Noto Serif JP", sans-serif;
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.5;
+	margin-top: 1.25rem;
+	padding: 0.9375rem;
+	width: 100%;
+}
+
+.contact-form__input:focus {
+	border: 1px solid #6F8471;
+	outline: none;
+}
+
+.contact-form__textarea {
+	background-color: #fafafa;
+	color: #000000;
+	font-family: "Noto Serif JP", sans-serif;
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.5;
+	margin-top: 1rem;
+	min-height: 21.25rem;
+	padding: 0.9375rem;
+	resize: vertical;
+	width: 100%;
+}
+
+.contact-form__textarea:focus {
+	border: 1px solid #6F8471;
+	outline: none;
+}
+
+.contact-form__radio-group {
+	margin-top: 1.5rem;
+}
+
+.contact-form__radio {
+	margin-right: 0.5rem;
+}
+
+.contact-form__radio-label {
+	color: #000000;
+	display: block;
+	font-family: "Noto Serif JP", sans-serif;
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.5;
+	margin-top: 1.5rem;
+}
+
+.contact-form__checkbox {
+	margin-right: 0.5rem;
+}
+
+.contact-form__checkbox-label {
+	align-items: center;
+	color: #000000;
+	display: flex;
+	font-family: "Noto Serif JP", sans-serif;
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.5;
+	margin-top: 2.5rem;
+}
+
+.contact-form__button {
+	margin-top: 2.5rem;
+	text-align: center;
+}
+
+.contact-form__submit:hover {
+	background-color: #151515;
+	color: #ffffff;
+}
+
+.contact-form__error {
+	color: #ff0000;
+	font-size: 0.75rem;
+	margin-top: 0.5rem;
+}
+
 .cta-item {
 	padding: 1.5rem 0;
 	text-align: center;
@@ -512,7 +640,7 @@ input[type=checkbox]:focus + label {
 }
 
 .cta-title__en {
-	color: #151515;
+	color: #000000;
 	display: block;
 	font-family: "Cormorant Garamond", serif;
 	font-size: 2.5rem;
@@ -522,7 +650,7 @@ input[type=checkbox]:focus + label {
 }
 
 .cta-title__ja {
-	color: #151515;
+	color: #000000;
 	display: block;
 	font-family: "Noto Serif JP", sans-serif;
 	font-size: 1rem;
@@ -746,7 +874,7 @@ body.is-fixed {
 }
 
 .header-nav__en {
-	color: #151515;
+	color: #000000;
 	font-family: "Cormorant Garamond", serif;
 	font-size: 1.25rem;
 	font-weight: 400;
@@ -754,7 +882,7 @@ body.is-fixed {
 }
 
 .header-nav__ja {
-	color: #151515;
+	color: #000000;
 	display: block;
 	font-family: "Noto Serif JP", sans-serif;
 	font-size: 0.625rem;
@@ -975,7 +1103,7 @@ body.is-fixed {
 }
 
 .news-card__date {
-	color: #151515;
+	color: #000000;
 	display: block;
 	font-family: "Cormorant Garamond", serif;
 	font-size: 0.875rem;
@@ -984,7 +1112,7 @@ body.is-fixed {
 }
 
 .news-card__title {
-	color: #151515;
+	color: #000000;
 	font-family: "Noto Serif JP", sans-serif;
 	font-size: 1.5rem;
 	font-weight: 400;
@@ -1013,7 +1141,7 @@ body.is-fixed {
 }
 
 .news-card__text {
-	color: #151515;
+	color: #000000;
 	font-family: "Noto Serif JP", sans-serif;
 	font-size: 0.875rem;
 	font-weight: 400;
@@ -1125,7 +1253,7 @@ body.is-fixed {
 }
 
 .product-card__title {
-	color: #151515;
+	color: #000000;
 	font-family: "Noto Serif JP", sans-serif;
 	font-size: 1rem;
 	font-weight: 400;
@@ -1147,7 +1275,7 @@ body.is-fixed {
 }
 
 .product-card__subtitle {
-	color: #151515;
+	color: #000000;
 	font-family: "Cormorant Garamond", serif;
 	font-size: 0.875rem;
 	font-weight: 400;
@@ -1155,7 +1283,7 @@ body.is-fixed {
 }
 
 .product-card__text {
-	color: #151515;
+	color: #000000;
 	font-family: "Noto Serif JP", sans-serif;
 	font-size: 0.875rem;
 	font-weight: 400;
@@ -1197,7 +1325,7 @@ body.is-fixed {
 }
 
 .product-slide__title {
-	color: #151515;
+	color: #000000;
 	font-family: "Noto Serif JP", sans-serif;
 	font-size: 1rem;
 	font-weight: 400;
@@ -1219,7 +1347,7 @@ body.is-fixed {
 }
 
 .product-slide__subtitle {
-	color: #151515;
+	color: #000000;
 	font-family: "Cormorant Garamond", serif;
 	font-size: 0.875rem;
 	font-weight: 400;
@@ -1252,7 +1380,7 @@ body.is-fixed {
 }
 
 .products-list__description {
-	color: #151515;
+	color: #000000;
 	font-family: "Noto Serif JP", sans-serif;
 	font-size: 1rem;
 	font-weight: 400;
@@ -1309,7 +1437,7 @@ body.is-fixed {
 }
 
 .section-title__en {
-	color: #151515;
+	color: #000000;
 	display: block;
 	font-family: "Cormorant Garamond", serif;
 	font-size: 2.5rem;
@@ -1320,7 +1448,7 @@ body.is-fixed {
 }
 
 .section-title__ja {
-	color: #151515;
+	color: #000000;
 	display: block;
 	font-family: "Noto Serif JP", sans-serif;
 	font-size: 1rem;
@@ -1333,7 +1461,7 @@ body.is-fixed {
 }
 
 .section-title__ja::before {
-	background-color: #151515;
+	background-color: #000000;
 	content: "";
 	display: block;
 	height: 0.0625rem;
@@ -1368,7 +1496,7 @@ body.is-fixed {
 }
 
 .sub-fv__page-title {
-	color: #151515;
+	color: #000000;
 	font-family: "Cormorant Garamond", serif;
 	font-size: 2.5rem;
 	font-weight: 400;
@@ -1410,7 +1538,7 @@ body.is-fixed {
 }
 
 .top-fv__copy {
-	color: #151515;
+	color: #000000;
 	font-family: "Cormorant Garamond", serif;
 	font-size: 2.5rem;
 	font-weight: 400;
@@ -1464,7 +1592,7 @@ body.is-fixed {
 }
 
 .top-philosophy__main-copy {
-	color: #151515;
+	color: #000000;
 	font-family: "Noto Serif JP", sans-serif;
 	font-size: 2rem;
 	font-weight: 400;
@@ -1472,7 +1600,7 @@ body.is-fixed {
 }
 
 .top-philosophy__description {
-	color: #151515;
+	color: #000000;
 	font-family: "Noto Serif JP", sans-serif;
 	font-size: 1rem;
 	font-weight: 400;
@@ -1516,7 +1644,7 @@ body.is-fixed {
 }
 
 .top-products__description {
-	color: #151515;
+	color: #000000;
 	font-family: "Noto Serif JP", sans-serif;
 	font-size: 1rem;
 	font-weight: 400;
@@ -1566,7 +1694,7 @@ body.is-fixed {
 }
 
 .top-works__description {
-	color: #151515;
+	color: #000000;
 	font-family: "Noto Serif JP", sans-serif;
 	font-size: 1rem;
 	font-weight: 400;
@@ -1693,7 +1821,7 @@ body.is-fixed {
 ========================================================= */
 
 .works-gallery__description {
-	color: #151515;
+	color: #000000;
 	font-family: "Noto Serif JP", sans-serif;
 	font-size: 1rem;
 	font-weight: 400;
@@ -1820,6 +1948,41 @@ html {
 	padding-left: 2.5rem;
 }
 
+.contact-form__form {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 7.5rem;
+	max-width: 37.5rem;
+}
+
+.contact-form__field {
+	margin-top: 3.75rem;
+}
+
+.contact-form__input {
+	margin-top: 1rem;
+}
+
+.contact-form__radio {
+	margin-right: 0.5rem;
+}
+
+.contact-form__radio-label {
+	margin-top: 0.9375rem;
+}
+
+.contact-form__checkbox {
+	margin-right: 0.5rem;
+}
+
+.contact-form__checkbox-label {
+	margin-top: 5rem;
+}
+
+.contact-form__error {
+	font-size: 0.8125rem;
+}
+
 .cta-item {
 	text-align: left;
 }
@@ -1858,7 +2021,7 @@ html {
 }
 
 .cta-title__ja::before {
-	background-color: #151515;
+	background-color: #000000;
 	content: "";
 	display: block;
 	height: 0.0625rem;
