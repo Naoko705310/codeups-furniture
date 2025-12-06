@@ -107,15 +107,85 @@
 }
 
 // ==============================
-// ラジオ本体 (input)
+// ラジオ本体 (input 非表示・アクセシブル)
 // ==============================
 
 .contact-form__radio {
-  margin-right: rem(8);
+  position: absolute;
+  opacity: 0;
+  width: rem(1);
+  height: rem(1);
+  margin: 0;
 
   @include mq(md) {
-    margin-right: rem(8);
+    width: rem(1);
+    height: rem(1);
   }
+}
+
+// ==============================
+// ラジオラベル（カスタムUI）
+// ==============================
+
+.contact-form__radio-label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-family: $base-font-family;
+  font-size: rem(16);
+  color: $color-font;
+  font-weight: $normal;
+  line-height: 1.5;
+  margin-top: rem(24);
+  padding-left: rem(3 + 14);
+  cursor: pointer;
+
+  @include mq(md) {
+    padding-left: rem(4 + 14);
+    margin-top: rem(15);
+  }
+}
+
+// ==============================
+// 外側の丸（14×14）
+// ==============================
+
+.contact-form__radio-label::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: rem(14);
+  height: rem(14);
+  border: 1px solid $color-main;
+  border-radius: 50%;
+  background-color: $white;
+}
+
+// ==============================
+// 内側の丸（8×8）※未選択時は非表示
+// ==============================
+
+.contact-form__radio-label::after {
+  content: "";
+  position: absolute;
+  top: rem(8);
+  left: rem(3);
+  width: rem(8);
+  height: rem(8);
+  background-color: $color-main;
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+// ==============================
+// ラジオchecked時に内側の丸を表示（HTML構造対応版）
+// ==============================
+
+.contact-form__radio-label:has(.contact-form__radio:checked)::after {
+  opacity: 1;
 }
 
 // ==============================
@@ -139,31 +209,105 @@
 // チェックボックス
 // ==============================
 
-.contact-form__checkbox {
-  margin-right: rem(8);
-
+.contact-form__field--checkbox {
+  align-items: center;
   @include mq(md) {
-    margin-right: rem(8);
+    display: flex;
+    justify-content: center;
   }
+}
+// ==============================
+// チェックボックス本体 (input 非表示・アクセシブル)
+// ==============================
+
+.contact-form__checkbox {
+  position: absolute;
+  opacity: 0;
+  width: rem(1);
+  height: rem(1);
+  margin: 0;
 }
 
 // ==============================
-// チェックボックスラベル
+// チェックボックスラベル（カスタムUI）
 // ==============================
 
 .contact-form__checkbox-label {
+  position: relative;
   display: flex;
   align-items: center;
+  gap: rem(8);
+  justify-content: flex-start;
   font-family: $base-font-family;
   font-size: rem(16);
   color: $color-font;
   font-weight: $normal;
   line-height: 1.5;
-  margin-top: rem(40);
+  // margin-top: rem(40);
+  padding-left: rem(24);
+  cursor: pointer;
+  // @include mq(md) {
+  //   margin-top: rem(80);
+  // }
+}
+
+// ==============================
+// 外側の四角（16×16）
+// ==============================
+
+.contact-form__checkbox-label::before {
+  content: "";
+  position: absolute;
+  top: rem(4);
+  left: 0;
+  width: rem(16);
+  height: rem(16);
+  border: 1px solid $color-gray;
+  background-color: $white;
+  border-radius: rem(3);
+}
+
+// ==============================
+// チェックマーク（未選択時は非表示）
+// ==============================
+
+.contact-form__checkbox-label::after {
+  content: "";
+  position: absolute;
+  top: rem(7);
+  left: rem(5);
+  width: rem(6);
+  height: rem(10);
+  border-right: 2px solid $color-main;
+  border-bottom: 2px solid $color-main;
+  transform: rotate(45deg);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+
   @include mq(md) {
-    margin-top: rem(80);
+    width: rem(6);
+    height: rem(10);
   }
 }
+
+// ==============================
+// checked 時にチェックマーク表示
+// ==============================
+
+.contact-form__checkbox-label:has(.contact-form__checkbox:checked)::after {
+  opacity: 1;
+}
+
+// ==============================
+// ✅ 既存の privacy-text デザインはそのまま保持
+// ==============================
+
+.contact-form__privacy-text {
+  display: inline;
+  color: #5BC4FF;
+  border-bottom: 1px solid #5BC4FF;
+}
+
 
 // ==============================
 // 送信エリア
@@ -195,8 +339,4 @@
   color: #ff0000;
   font-size: rem(12);
   margin-top: rem(8);
-
-  @include mq(md) {
-    font-size: rem(13);
-  }
 }
