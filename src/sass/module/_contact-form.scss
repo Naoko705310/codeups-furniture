@@ -387,9 +387,12 @@
 .contact-form__global-error {
   display: none;
   color: #ff0000;
-  font-size: rem(14);
+  font-size: rem(12);
   text-align: center;
   margin-top: rem(24);
+  @include mq(md) {
+    font-size: rem(14);
+  }
 }
 
 .contact-form__global-error.is-show {
@@ -403,7 +406,7 @@
 .contact-form__input.is-error,
 .contact-form__textarea.is-error {
   border: 1px solid #ff0000;
-  background-color: #fff5f5;
+  background-color: #fafafa;
 }
 
 .contact-form__field.is-error .contact-form__radio-label::before,

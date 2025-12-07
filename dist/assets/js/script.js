@@ -182,7 +182,7 @@ jQuery(function ($) {
         e.preventDefault(); // フォーム送信をキャンセル
 
         // グローバルエラーを表示
-        $globalError.text("必須項目が入力されていません。内容をご確認ください。").addClass("is-show");
+        $globalError.text("※必須項目が入力されていません。入力してください。").addClass("is-show");
 
         // エラーメッセージの位置までスクロール
         $("html, body").animate({

@@ -726,7 +726,7 @@ legend {
 .contact-form__global-error {
 	color: #ff0000;
 	display: none;
-	font-size: 0.875rem;
+	font-size: 0.75rem;
 	margin-top: 1.5rem;
 	text-align: center;
 }
@@ -737,7 +737,7 @@ legend {
 
 .contact-form__input.is-error,
 .contact-form__textarea.is-error {
-	background-color: #fff5f5;
+	background-color: #fafafa;
 	border: 1px solid #ff0000;
 }
 
@@ -2121,6 +2121,10 @@ html {
 .contact-form__checkbox-label::after {
 	height: 0.625rem;
 	width: 0.375rem;
+}
+
+.contact-form__global-error {
+	font-size: 0.875rem;
 }
 
 .cta-item {
