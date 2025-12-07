@@ -368,3 +368,17 @@
   outline: none;
 }
 
+// ==============================
+// ✅ エラー状態
+// ==============================
+
+.contact-form__input.is-error,
+.contact-form__textarea.is-error {
+  border: 1px solid #ff0000;
+  background-color: #fff5f5;
+}
+
+.contact-form__field.is-error .contact-form__radio-label::before,
+.contact-form__field.is-error .contact-form__checkbox-label::before {
+  border-color: #ff0000;
+}

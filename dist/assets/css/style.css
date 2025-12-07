@@ -711,6 +711,17 @@ legend {
 	outline: none;
 }
 
+.contact-form__input.is-error,
+.contact-form__textarea.is-error {
+	background-color: #fff5f5;
+	border: 1px solid #ff0000;
+}
+
+.contact-form__field.is-error .contact-form__radio-label::before,
+.contact-form__field.is-error .contact-form__checkbox-label::before {
+	border-color: #ff0000;
+}
+
 .cta-item {
 	padding: 1.5rem 0;
 	text-align: center;
@@ -1618,11 +1629,6 @@ body.is-fixed {
 	margin-top: 2.5rem;
 }
 
-.sub-fv__sns {
-	grid-column: 1; /* 1. 1frカラムの右端 (画像側) に要素を寄せる */
-	justify-self: center; /* 2. 画像との間に余白（例: 20px）を設定 */
-}
-
 .sub-fv__sns.sns-block {
 	padding-bottom: 0;
 }
@@ -2390,21 +2396,26 @@ html {
 }
 
 .sub-fv__image-wrapper {
-	align-items: end;
-	display: grid;
-	grid-template-columns: 1fr 67.5rem 1fr;
-	margin-left: calc(50% - 50vw);
-	width: 100vw;
+	position: relative;
 }
 
 .sub-fv__sns {
-	max-width: 11.25rem;
+	align-items: flex-end;
+	background: red;
+	bottom: 0;
+	display: flex;
+	margin-right: 4.875rem;
+	position: absolute;
+	right: 100%;
+	z-index: 10;
+}
+
+.sub-fv__sns.sns-block {
+	display: block;
 }
 
 .sub-fv__image {
-	aspect-ratio: 1080/480; /* grid-column-start: 2; と同じ意味 */
-	grid-column: 2;
-	width: 100%;
+	aspect-ratio: 1080/480;
 }
 
 .top-fv__content {

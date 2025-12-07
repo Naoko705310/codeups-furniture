@@ -4,6 +4,10 @@
 
 }
 
+.sub-fv__inner {
+
+}
+
 .sub-fv__page-title {
   font-family: $second-font-family;
   font-size: rem(40);
@@ -23,28 +27,29 @@
 .sub-fv__image-wrapper {
   margin-top: rem(40);
   @include mq(md) {
-    display: grid;
-    // grid-template-columns: minmax(0, rem(180)) rem(1080) minmax(0, rem(180));
-    grid-template-columns: 1fr rem(1080) 1fr;
-    align-items: end;
-    width: 100vw;
-    margin-left: calc(50% - 50vw);
-    // max-width: rem(1440);
+    position: relative;
   }
 }
 
 .sub-fv__sns {
-  grid-column: 1; 
-  /* 1. 1frカラムの右端 (画像側) に要素を寄せる */
-  justify-self: center; 
-  /* 2. 画像との間に余白（例: 20px）を設定 */
-  // padding-right: rem(20);
   @include mq(md) {
-    max-width: rem(180);
+    background: red;
+    display: flex;
+    position: absolute;
+    right: 100%;
+    margin-right: rem(78);
+    bottom: 0;
+    align-items: flex-end;
+    z-index: 10; // ✅ 画像に隠れないように
   }
 }
+
+// sns-blockを下層FV用に上書き
 .sub-fv__sns.sns-block {
   padding-bottom: 0;
+  @include mq(md) {
+    display: block; // display: flex を解除
+  }
 }
 
 
@@ -53,9 +58,6 @@
   aspect-ratio: 345/259;
   @include mq(md) {
     aspect-ratio: 1080/480;
-    /* grid-column-start: 2; と同じ意味 */
-    grid-column: 2; 
-    width: 100%;
   }
 }
 
