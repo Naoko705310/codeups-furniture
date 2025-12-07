@@ -531,6 +531,12 @@ legend {
 	outline: none;
 }
 
+.contact-form__input.is-error {
+	background-color: #fff5f5;
+	border: 1px solid #ff0000;
+	outline: none;
+}
+
 .contact-form__textarea {
 	background-color: #fafafa;
 	color: #000000;
@@ -547,6 +553,12 @@ legend {
 
 .contact-form__textarea:focus {
 	border: 1px solid #6F8471;
+	outline: none;
+}
+
+.contact-form__textarea.is-error {
+	background-color: #fff5f5;
+	border: 1px solid #ff0000;
 	outline: none;
 }
 
@@ -709,6 +721,18 @@ legend {
 .contact-form__textarea:focus {
 	border: 1px solid #6F8471;
 	outline: none;
+}
+
+.contact-form__global-error {
+	color: #ff0000;
+	display: none;
+	font-size: 0.875rem;
+	margin-top: 1.5rem;
+	text-align: center;
+}
+
+.contact-form__global-error.is-show {
+	display: block;
 }
 
 .contact-form__input.is-error,

@@ -75,6 +75,12 @@
   outline: none;
 }
 
+.contact-form__input.is-error {
+  border: 1px solid #ff0000;
+  background-color: #fff5f5;
+  outline: none;
+}
+
 // ==============================
 // テキストエリア
 // ==============================
@@ -95,6 +101,12 @@
 
 .contact-form__textarea:focus {
   border: 1px solid $color-main;
+  outline: none;
+}
+
+.contact-form__textarea.is-error {
+  border: 1px solid #ff0000;
+  background-color: #fff5f5;
   outline: none;
 }
 
@@ -369,7 +381,23 @@
 }
 
 // ==============================
-// ✅ エラー状態
+// ✅ フォーム上部の共通エラー
+// ==============================
+
+.contact-form__global-error {
+  display: none;
+  color: #ff0000;
+  font-size: rem(14);
+  text-align: center;
+  margin-top: rem(24);
+}
+
+.contact-form__global-error.is-show {
+  display: block;
+}
+
+// ==============================
+// ✅ 赤枠エラー表示
 // ==============================
 
 .contact-form__input.is-error,

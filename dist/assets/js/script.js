@@ -101,4 +101,115 @@ jQuery(function ($) {
       }
     }
   });
+
+  /* --------------------------------------------
+  /* お問い合わせフォーム
+  /* -------------------------------------------- */
+
+  $(function () {
+    // フォーム本体
+    var $form = $(".contact-form__form");
+
+    // フォーム上部のグローバルエラーメッセージ
+    var $globalError = $(".contact-form__global-error");
+
+    // テキスト入力・テキストエリア
+    var $inputs = $(".contact-form__input, .contact-form__textarea");
+
+    // ラジオボタン
+    var $radios = $(".contact-form__radio");
+
+    // チェックボックス
+    var $checkboxes = $(".contact-form__checkbox");
+
+    // =========================
+    // ✅ 送信ボタンが押されたとき
+    // =========================
+    $form.on("submit", function (e) {
+      var hasError = false; // エラーがあるかどうかの判定用フラグ
+
+      // グローバルエラー表示をリセット
+      $globalError.removeClass("is-show").text("");
+
+      // すでに付いている is-error をすべて削除
+      $(".is-error").removeClass("is-error");
+
+      // =========================
+      // ✅ input / textarea の必須チェック
+      // =========================
+      $inputs.each(function () {
+        if ($(this).prop("required") && $.trim($(this).val()) === "") {
+          $(this).addClass("is-error"); // 赤枠を付ける
+          hasError = true;
+        }
+      });
+
+      // =========================
+      // ✅ radio の必須チェック（グループ単位）
+      // =========================
+      var radioNames = [];
+
+      // radio の name を重複なしで収集
+      $radios.each(function () {
+        var name = $(this).attr("name");
+        if (!radioNames.includes(name)) {
+          radioNames.push(name);
+        }
+      });
+
+      // 各グループで1つも選ばれていなければエラー
+      $.each(radioNames, function (index, name) {
+        if ($("input[name=\"".concat(name, "\"]:checked")).length === 0) {
+          $("input[name=\"".concat(name, "\"]")).closest(".contact-form__field").addClass("is-error");
+          hasError = true;
+        }
+      });
+
+      // =========================
+      // ✅ checkbox の必須チェック
+      // =========================
+      $checkboxes.each(function () {
+        if ($(this).prop("required") && !$(this).prop("checked")) {
+          $(this).closest(".contact-form__field").addClass("is-error");
+          hasError = true;
+        }
+      });
+
+      // =========================
+      // ✅ エラーがあった場合は送信を止める
+      // =========================
+      if (hasError) {
+        e.preventDefault(); // フォーム送信をキャンセル
+
+        // グローバルエラーを表示
+        $globalError.text("必須項目が入力されていません。内容をご確認ください。").addClass("is-show");
+
+        // エラーメッセージの位置までスクロール
+        $("html, body").animate({
+          scrollTop: $globalError.offset().top - 40
+        }, 400);
+      }
+    });
+
+    // =========================
+    // ✅ 入力したら is-error を解除
+    // =========================
+
+    // テキスト入力・テキストエリア
+    $inputs.on("input", function () {
+      if ($.trim($(this).val()) !== "") {
+        $(this).removeClass("is-error");
+      }
+    });
+
+    // ラジオボタン
+    $radios.on("change", function () {
+      $(this).closest(".contact-form__field").removeClass("is-error");
+    });
+
+    // チェックボックス
+    $checkboxes.on("change", function () {
+      $(this).closest(".contact-form__field").removeClass("is-error");
+    });
+  });
 });
