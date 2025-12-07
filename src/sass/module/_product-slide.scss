@@ -67,61 +67,30 @@
 //   ▼ スライドボタン（スライダーの外に出した版）
 // ======================================================
 
-.top-products__slider-buttons {
+.top-products__buttons {
+  width: rem(156);
   min-height: rem(46);
-  margin-top: rem(16);
-  position: relative;
+  position: relative; // ナビゲーション矢印の配置
   display: flex;
-  gap: rem(64);
-  justify-content: center; 
+  justify-content: center;
   align-items: center;
+  gap: rem(64);
+  margin: rem(40) auto 0;
   @include mq(md) {
-    margin-top: 0;
+    width: rem(132);
     gap: rem(40);
   }
-  // min-height: rem(46);
-  // display: flex;
-  // justify-content: center;
-  // gap: rem(32);
-  // margin-top: rem(16);
-  // align-items: center;  // ★ 横だけでなく縦も中央に揃える
-  // height: rem(46);      // ★ 高さを明示すること
-
-  @include mq(md) {
-
-    // position: absolute;
-    // top: rem(40);                // ★ 説明ブロックの余白に合わせて調整
-    // right: rem(42);              // ★ background の padding と揃えている
-    // margin: 0;                   // 下マージン不要
-    // gap: rem(24);                // カンプは132px → 約46*2 + GAP 約40px
-    // z-index: 2;                  // スライダーより上に重ねる
-  }
 }
 
-.top-products__slider-buttons .swiper-button-prev,
-.top-products__slider-buttons .swiper-button-next {
-  // position: static !important;
-  // width: rem(46) !important;
-  // height: rem(46) !important;
-  // background-size: contain !important;
-  // background-repeat: no-repeat !important;
-  // background-position: center !important;
-  // cursor: pointer;
+.top-products__prev,
+.top-products__next {
+  width: rem(46);
+  height: rem(46);
 }
 
-/* デフォルト矢印を確実に消す */
-.swiper-button-prev::after,
-.swiper-button-prev::before,
-.swiper-button-next::after,
-.swiper-button-next::before {
-  // display: none !important;
-}
-
-/* ▼ 画像指定 */
-.swiper-button-prev {
-  // background-image: url("../images/common/slide-button-left.png") !important;
-}
-
-.swiper-button-next {
-  // background-image: url("../images/common/slide-button-right.png") !important;
+.top-products__prev img,
+.top-products__next img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }

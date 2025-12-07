@@ -55,7 +55,7 @@
   font-size: rem(32);
   color: $color-font;
   font-weight: $normal;
-  line-height: 1.2;
+  line-height: 1.5;
   @include mq(md) {
     font-size: rem(40);
   }
@@ -66,7 +66,7 @@
   font-size: rem(16);
   color: $color-font;
   font-weight: $normal;
-  line-height: 1.2;
+  line-height: 1.5;
   margin-top: rem(32);
   @include mq(md) {
     margin-top: rem(42);
@@ -81,21 +81,39 @@
   }
 }
 
-
-
+// 分割画像の親（全部で5枚）
 .top-philosophy__image {
-  width: 100%;
+  display: flex;
+  width: rem(345);
   aspect-ratio: 345 / 190;
+  gap: rem(12);
+  padding: rem(12) 0;
   margin-top: rem(40);
   @include mq(md) {
+    width: rem(564);
     aspect-ratio: 564 / 310;
     margin-top: 0;
   }
 }
 
-.top-philosophy__image img {
-  width: 100%;
+// 共通スライス
+.top-philosophy__slice {
+  width: rem(69);
   height: 100%;
-  object-fit: cover;
+  background-image: url("../images/common/top-philosophy.jpg");
+  background-size: rem(345) rem(190);
+  background-repeat: no-repeat;
+  @include mq(md) {
+    width: rem(112);
+    height: 100%;
+    background-size: rem(564) rem(310);
+  }
 }
 
+.top-philosophy__slice:nth-child(1) {
+  transform: translateY(rem(12));   // 下にズラす
+}
+
+.top-philosophy__slice:nth-child(5) {
+  transform: translateY(rem(-12));  // 上にズラす
+}

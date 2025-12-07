@@ -13,7 +13,7 @@
   font-size: rem(40);
   color: $color-font;
   font-weight: $normal;
-  line-height: 1;
+  line-height: 1.2;
   text-align: left;
   @include mq(md) {
     font-size: rem(64);
