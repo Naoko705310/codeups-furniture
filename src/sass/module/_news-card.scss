@@ -48,17 +48,16 @@
 
 .news-card__tag,
 .news-card-latest__tag {
-  min-width: rem(60);
+  min-width: rem(40);
   display: inline-block;
   background-color: $color-main;
   font-family: $second-font-family;
-  font-size: rem(12);
+  font-size: rem(10);
   color: $white;
   font-weight: $normal;
   line-height: 1.2;
   text-align: center;
-  padding: rem(2) 0;
-  border-radius: rem(2);
+  padding: rem(3) 0;
 }
 
 .news-card__text {

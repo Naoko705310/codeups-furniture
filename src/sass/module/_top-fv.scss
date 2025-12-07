@@ -22,7 +22,7 @@
   font-size: rem(40);
   color: $color-font;
   font-weight: $normal;
-  line-height: 1;
+  line-height: 1.2;
   @include mq(md) {
     font-size: rem(64);
   }
@@ -32,6 +32,8 @@
 .top-fv__image-wrapper {
   margin-top: rem(40);
   margin-right: rem(-15);
+  position: relative;
+  z-index: -1;
   @include mq(md) {
     display: grid;
     grid-template-columns: 12.5% 1fr;
@@ -60,6 +62,9 @@
 // 最新ニュースカード（TOPページ）
 .top-fv__news {
   margin-left: rem(-15);
+  margin-top: rem(-40);
+  // position: absolute;
+  z-index: 10;
   @include mq(md) {
     width: calc(900 / 1440 * 100vw);  // ← 62.5vwになる
     margin-right: auto;
