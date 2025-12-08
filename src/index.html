@@ -231,70 +231,79 @@
           </div>
 
         </div>
-        <!-- TOP商品スライダー -->
-        <div class="top-products__slider swiper">
+
+        <!-- ✅ 共通：商品スライダー -->
+        <div class="products-slider swiper">
           <div class="swiper-wrapper">
+
             <!-- 1枚目 -->
-            <div class="swiper-slide product-slide">
-              <a href="#">
-                <div class="product-slide__image">
+            <div class="swiper-slide">
+              <a href="#" class="product-card product-card--slider">
+                <div class="product-card__image">
                   <img src="./assets/images/common/products-item01.jpg" alt="アンティークソファ">
                 </div>
-                <div class="product-slide__body">
-                  <p class="product-slide__title">アンティークソファ</p>
-                  <p class="product-slide__subtitle">US</p>
+                <div class="product-card__body">
+                  <p class="product-card__title">アンティークソファ</p>
+                  <p class="product-card__subtitle">US</p>
                 </div>
               </a>
             </div>
+
             <!-- 2枚目 -->
-            <div class="swiper-slide product-slide">
-              <a href="#">
-                <div class="product-slide__image">
+            <div class="swiper-slide">
+              <a href="#" class="product-card product-card--slider">
+                <div class="product-card__image">
                   <img src="./assets/images/common/products-item02.jpg" alt="アンティークソファ">
                 </div>
-                <div class="product-slide__body">
-                  <p class="product-slide__title">アンティークソファ</p>
-                  <p class="product-slide__subtitle">France</p>
+                <div class="product-card__body">
+                  <p class="product-card__title">アンティークソファ</p>
+                  <p class="product-card__subtitle">France</p>
                 </div>
               </a>
             </div>
+
             <!-- 3枚目 -->
-            <div class="swiper-slide product-slide">
-              <a href="#">
-                <div class="product-slide__image">
+            <div class="swiper-slide">
+              <a href="#" class="product-card product-card--slider">
+                <div class="product-card__image">
                   <img src="./assets/images/common/products-item03.jpg" alt="アンティークチェア">
                 </div>
-                <div class="product-slide__body">
-                  <p class="product-slide__title">アンティークチェア</p>
-                  <p class="product-slide__subtitle">Italia</p>
+                <div class="product-card__body">
+                  <p class="product-card__title">アンティークチェア</p>
+                  <p class="product-card__subtitle">Italia</p>
                 </div>
               </a>
             </div>
-            <!-- 4枚目（3枚だとナビゲーションが表示されない） -->
-            <div class="swiper-slide product-slide">
-              <a href="#">
-                <div class="product-slide__image">
+
+            <!-- 4枚目 -->
+            <div class="swiper-slide">
+              <a href="#" class="product-card product-card--slider">
+                <div class="product-card__image">
                   <img src="./assets/images/common/products-item03.jpg" alt="アンティークチェア">
                 </div>
-                <div class="product-slide__body">
-                  <p class="product-slide__title">アンティークチェア</p>
-                  <p class="product-slide__subtitle">Italia</p>
+                <div class="product-card__body">
+                  <p class="product-card__title">アンティークチェア</p>
+                  <p class="product-card__subtitle">Italia</p>
                 </div>
               </a>
             </div>
+
           </div>
         </div>
-        <!-- 商品スライダーのナビゲーションボタン -->
-        <div class="top-products__buttons">
-          <button class="top-products__prev swiper-button-prev">
+
+        <!-- ✅ ナビゲーション（products-slider用に統一） -->
+        <div class="products-slider__buttons">
+          <button class="products-slider__prev swiper-button-prev">
             <img src="./assets/images/common/slide-button-left.png" alt="前へ">
           </button>
-          <button class="top-products__next swiper-button-next">
+          <button class="products-slider__next swiper-button-next">
             <img src="./assets/images/common/slide-button-right.png" alt="次へ">
           </button>
         </div>
+
       </div>
     </section>
+
 
     <!-- Works -->
     <section class="top-works">

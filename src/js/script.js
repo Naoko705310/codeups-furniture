@@ -52,12 +52,15 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
   // ニュース詳細：Recommend
   const recommendSlider = new Swiper('.recommend-products__slider', {
     loop: true,
+    loopAdditionalSlides: 2, // ループ時に追加で複製するスライド数
     slidesPerView: 1.25,
     centeredSlides: true,
+    centeredSlidesBounds: false, // 境界を無視して中央配置
     spaceBetween: 24,
+    watchSlidesProgress: true, // スライドの進行状況を監視
+    watchSlidesVisibility: true, // スライドの可視性を監視
   
     navigation: {
-      // ★ ここを逆にする！
       nextEl: '.recommend-products__prev', // ← ボタンで右へ進む
       prevEl: '.recommend-products__next', // → ボタンで左へ戻る
     },
@@ -66,6 +69,16 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
       el: '.recommend-products__pagination',
       clickable: true,
     },
+
+        // 初期化後に位置を調整
+        on: {
+          init: function() {
+            this.update();
+          },
+          resize: function() {
+            this.update();
+          }
+        },
   
     breakpoints: {
       768: {

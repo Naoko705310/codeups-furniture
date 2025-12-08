@@ -7,7 +7,7 @@
 }
 
 .recommend-products__inner {
-
+  overflow: visible; // 見切れスライド表示のため
 }
 
 
@@ -22,7 +22,7 @@
   margin-top: rem(40);
   margin-right: calc(50% - 50vw);
   margin-left: calc(50% - 50vw);
-  // overflow: visible; // 見切れスライド表示
+  overflow: visible; // 見切れスライド表示
   @include mq(md) {
     max-width: rem(931);
     margin-right: auto;
@@ -36,6 +36,9 @@
 
 .recommend-products__slider .swiper-wrapper {
   margin-top: rem(0);
+    // 中央配置を確実にする
+    display: flex;
+    align-items: center;
 }
 
 // おすすめ商品スライド本体

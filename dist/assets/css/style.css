@@ -1544,10 +1544,15 @@ body.is-fixed {
 	margin-top: 1rem;
 }
 
+.recommend-products__inner {
+	overflow: visible;
+}
+
 .recommend-products__slider {
 	margin-left: calc(50% - 50vw);
 	margin-right: calc(50% - 50vw);
 	margin-top: 2.5rem;
+	overflow: visible;
 }
 
 .recommend-products__slider .swiper {
@@ -1555,6 +1560,8 @@ body.is-fixed {
 }
 
 .recommend-products__slider .swiper-wrapper {
+	align-items: center;
+	display: flex;
 	margin-top: 0rem;
 }
 
