@@ -208,15 +208,18 @@
       <!-- 商品紹介 -->
       <section class="page-news-details__products recommend-products">
         <div class="recommend-products__inner inner">
+
           <h2 class="section-title recommend-products__title">
             <span class="section-title__en">Recommend</span>
             <span class="section-title__ja">おすすめ商品</span>
           </h2>
-          <!-- おすすめ商品スライダー -->
-          <div class="recommend-products__slider swiper">
+
+          <!-- ✅ 共通：商品スライダー -->
+          <div class="recommend-products__slider products-slider swiper">
             <div class="swiper-wrapper">
+
               <div class="swiper-slide">
-                <a href="#" class="product-card">
+                <a href="#" class="product-card product-card--slider">
                   <div class="product-card__image">
                     <img src="./assets/images/common/products-item01.jpg" alt="アンティークソファ">
                   </div>
@@ -226,8 +229,9 @@
                   </div>
                 </a>
               </div>
+
               <div class="swiper-slide">
-                <a href="#" class="product-card">
+                <a href="#" class="product-card product-card--slider">
                   <div class="product-card__image">
                     <img src="./assets/images/common/products-item01.jpg" alt="アンティークソファ">
                   </div>
@@ -237,8 +241,9 @@
                   </div>
                 </a>
               </div>
+
               <div class="swiper-slide">
-                <a href="#" class="product-card">
+                <a href="#" class="product-card product-card--slider">
                   <div class="product-card__image">
                     <img src="./assets/images/common/products-item01.jpg" alt="アンティークソファ">
                   </div>
@@ -248,20 +253,24 @@
                   </div>
                 </a>
               </div>
+
             </div>
           </div>
-          <div class="recommend-products__buttons">
-            <button class="recommend-products__prev swiper-button-prev">
+
+          <!-- ✅ ナビゲーションも products-slider に統一 -->
+          <div class="products-slider__buttons">
+            <button class="products-slider__prev swiper-button-prev">
               <img src="./assets/images/common/slide-button-left.png" alt="前へ">
             </button>
-          
-            <button class="recommend-products__next swiper-button-next">
+
+            <button class="products-slider__next swiper-button-next">
               <img src="./assets/images/common/slide-button-right.png" alt="次へ">
             </button>
           </div>
-          
+
         </div>
       </section>
+
       <!-- 最新ニュース -->
       <section class="page-news-details__new-post new-post">
         <div class="new-post__inner inner">
@@ -269,8 +278,9 @@
             <span class="section-title__en">New Post</span>
             <span class="section-title__ja">最新ニュース</span>
           </h2>
+
           <!-- 最新ニューススライダー -->
-          <div class="new-post__slider swiper">
+          <div class="new-post__slider products-slider swiper">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <div class="news-card">
@@ -292,6 +302,7 @@
                   </a>
                 </div>
               </div>
+
               <div class="swiper-slide">
                 <div class="news-card">
                   <a href="#">
@@ -312,6 +323,7 @@
                   </a>
                 </div>
               </div>
+
               <div class="swiper-slide">
                 <div class="news-card">
                   <a href="#">
@@ -335,17 +347,20 @@
             </div>
             <!-- <div class="new-post__pagination swiper-pagination"></div> -->
           </div>
-          <div class="new-post__buttons">
-            <button class="new-post__prev swiper-button-prev">
+
+          <!-- ✅ 共通ナビ用クラスを追加 -->
+          <div class="new-post__buttons products-slider__buttons">
+            <button class="new-post__prev products-slider__prev swiper-button-prev">
               <img src="./assets/images/common/slide-button-left.png" alt="前へ">
             </button>
-          
-            <button class="new-post__next swiper-button-next">
+
+            <button class="new-post__next products-slider__next swiper-button-next">
               <img src="./assets/images/common/slide-button-right.png" alt="次へ">
             </button>
           </div>
         </div>
       </section>
+
       <!-- CTAコンテンツ -->
       <section class="cta top-cta page-about__cta">
         <div class="cta__inner">

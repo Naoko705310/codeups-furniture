@@ -1,0 +1,34 @@
+@use "global" as *;
+
+// ----------------------------------
+// 共通：products-slider ナビゲーション
+// ----------------------------------
+
+.products-slider__buttons {
+  width: rem(156);
+  min-height: rem(46);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: rem(64);
+  margin: rem(40) auto 0;
+
+  @include mq(md) {
+    width: rem(132);
+    gap: rem(40);
+  }
+}
+
+.products-slider__prev,
+.products-slider__next {
+  width: rem(46);
+  height: rem(46);
+}
+
+.products-slider__prev img,
+.products-slider__next img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}

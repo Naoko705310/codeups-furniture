@@ -1095,31 +1095,6 @@ body.is-fixed {
 	margin-top: 2.5rem;
 }
 
-.new-post__buttons {
-	align-items: center;
-	display: flex;
-	gap: 4rem;
-	justify-content: center;
-	margin: 2.5rem auto 0;
-	min-height: 2.875rem;
-	position: relative;
-	width: 9.75rem;
-}
-
-.new-post__prev,
-.new-post__next {
-	height: 2.875rem;
-	width: 2.875rem;
-}
-
-.new-post__prev img,
-.new-post__next img {
-	-o-object-fit: contain;
-	height: 100%;
-	object-fit: contain;
-	width: 100%;
-}
-
 .news-article__header {
 	text-align: center;
 }
@@ -1463,33 +1438,7 @@ body.is-fixed {
 	margin-top: 1rem;
 }
 
-.recommend-products__inner {
-	overflow: visible;
-}
-
-.recommend-products__slider {
-	margin-left: calc(50% - 50vw);
-	margin-right: calc(50% - 50vw);
-	margin-top: 2.5rem;
-	overflow: visible;
-}
-
-.recommend-products__slider .swiper {
-	overflow: visible;
-}
-
-.recommend-products__slider .swiper-wrapper {
-	align-items: center;
-	display: flex;
-	margin-top: 0rem;
-}
-
-.recommend-products__slider .swiper-slide {
-	flex-shrink: 0;
-	width: 16.5rem;
-}
-
-.recommend-products__buttons {
+.products-slider__buttons {
 	align-items: center;
 	display: flex;
 	gap: 4rem;
@@ -1500,14 +1449,14 @@ body.is-fixed {
 	width: 9.75rem;
 }
 
-.recommend-products__prev,
-.recommend-products__next {
+.products-slider__prev,
+.products-slider__next {
 	height: 2.875rem;
 	width: 2.875rem;
 }
 
-.recommend-products__prev img,
-.recommend-products__next img {
+.products-slider__prev img,
+.products-slider__next img {
 	-o-object-fit: contain;
 	height: 100%;
 	object-fit: contain;
@@ -2249,11 +2198,6 @@ html {
 	margin-right: auto;
 }
 
-.new-post__buttons {
-	gap: 2.5rem;
-	width: 8.25rem;
-}
-
 .news-article__inner.inner {
 	margin-left: auto;
 	margin-right: auto;
@@ -2347,17 +2291,7 @@ html {
 	margin-top: 5rem;
 }
 
-.recommend-products__slider {
-	margin-left: auto;
-	margin-right: auto;
-	max-width: 58.1875rem;
-}
-
-.recommend-products__slider .swiper-slide {
-	width: 23.4375rem;
-}
-
-.recommend-products__buttons {
+.products-slider__buttons {
 	gap: 2.5rem;
 	width: 8.25rem;
 }
