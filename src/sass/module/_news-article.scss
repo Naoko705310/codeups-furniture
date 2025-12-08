@@ -43,6 +43,7 @@ text-align: center;
   aspect-ratio: 345 / 259;
   border-bottom: 1px solid $color-gray;
   padding-bottom: rem(24);
+  margin-top: rem(40);
   @include mq(md) {
     aspect-ratio: 700 / 468;
     padding-bottom: rem(40);
