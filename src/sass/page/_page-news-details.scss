@@ -12,20 +12,11 @@
   @include mq(md) {
     margin-top: rem(59);
   }
-  // margin-top: rem(48);
-  // @include mq(md) {
-  //   margin-top: rem(120);
-  // }
 }
 
 // おすすめ商品
-.page-news-details__products {
+.page-news-details__recommend-products {
   margin-top: rem(80);
-  @include mq(md) {
-    // max-width: rem(1011);
-    // margin-right: auto;
-    // margin-left: auto;
-  }
 }
 
 // 最新ニュース

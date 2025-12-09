@@ -22,64 +22,76 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     });
   });
 
-  /* --------------------------------------------
-  /* TOPページ 商品スライド
-  /* -------------------------------------------- */
 
-  const productsSwiper = new Swiper('.top-products__slider', {
-    loop: true,
-  
-    // ▼ SP（375px）で 3枚表示
-    slidesPerView: 1.35,
-    centeredSlides: true,  // ← 真ん中を基準にする
-    spaceBetween: 23,      // ← カンプのgap指定
-  
-    navigation: {
-      nextEl: '.top-products__next',
-      prevEl: '.top-products__prev'
+  /* --------------------------------------------
+/* 共通：Products Slider 設定
+/* -------------------------------------------- */
+
+const baseProductsSliderOptions = {
+  loop: true,
+
+  centeredSlides: true,
+  centeredSlidesBounds: false,
+  watchSlidesProgress: true,
+  watchSlidesVisibility: true,
+
+  navigation: {
+    nextEl: '.products-slider__next',
+    prevEl: '.products-slider__prev'
+  },
+
+  on: {
+    init: function () {
+      this.update();
     },
-  
+    resize: function () {
+      this.update();
+    }
+  }
+};
+
+
+/* --------------------------------------------
+/* TOPページ：Products
+/* -------------------------------------------- */
+
+const topProductsSlider = new Swiper(
+  '.top-products__slider.products-slider',
+  {
+    ...baseProductsSliderOptions,
+
+    slidesPerView: 1.35,
+    spaceBetween: 23,
+
     breakpoints: {
-      // ▼ PC（768px〜）
       768: {
-        slidesPerView: 3,   // PCは 3 枚 FULL 表示
+        slidesPerView: 3,
         centeredSlides: false,
         spaceBetween: 32,
       }
     }
-  });
-  
-  // ニュース詳細：Recommend
-  const recommendSlider = new Swiper('.recommend-products__slider', {
-    loop: true,
-    loopAdditionalSlides: 2, // ループ時に追加で複製するスライド数
+  }
+);
+
+
+/* --------------------------------------------
+/* News詳細：Recommend
+/* -------------------------------------------- */
+
+const recommendSlider = new Swiper(
+  '.recommend-products__slider.products-slider',
+  {
+    ...baseProductsSliderOptions,
+
+    loopAdditionalSlides: 2,
     slidesPerView: 1.25,
-    centeredSlides: true,
-    centeredSlidesBounds: false, // 境界を無視して中央配置
     spaceBetween: 24,
-    watchSlidesProgress: true, // スライドの進行状況を監視
-    watchSlidesVisibility: true, // スライドの可視性を監視
-  
-    navigation: {
-      nextEl: '.recommend-products__prev', // ← ボタンで右へ進む
-      prevEl: '.recommend-products__next', // → ボタンで左へ戻る
-    },
-  
+
     pagination: {
       el: '.recommend-products__pagination',
       clickable: true,
     },
 
-        // 初期化後に位置を調整
-        on: {
-          init: function() {
-            this.update();
-          },
-          resize: function() {
-            this.update();
-          }
-        },
-  
     breakpoints: {
       768: {
         slidesPerView: 3,
@@ -87,34 +99,39 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
         spaceBetween: 24,
       }
     }
-  });
-  
+  }
+);
 
 
-  // ニュース詳細：New Post
-  const newPostSlider = new Swiper('.new-post__slider', {
-    loop: true,
+/* --------------------------------------------
+/* News詳細：New Post
+/* -------------------------------------------- */
+
+const newPostSlider = new Swiper(
+  '.new-post__slider.products-slider',
+  {
+    ...baseProductsSliderOptions,
+
     slidesPerView: 1.25,
     spaceBetween: 30,
-  
-    navigation: {
-      // ★ ここも逆にする！
-      nextEl: '.new-post__prev', // ← ボタンで右へ進む
-      prevEl: '.new-post__next', // → ボタンで左へ戻る
-    },
-  
+
     pagination: {
       el: '.new-post__pagination',
       clickable: true,
     },
+
     breakpoints: {
       768: {
         slidesPerView: 3,
+        centeredSlides: false,
         spaceBetween: 30,
       }
     }
-  });
-  
+  }
+);
+
+
+
   /* --------------------------------------------
   /* お問い合わせフォーム
   /* -------------------------------------------- */

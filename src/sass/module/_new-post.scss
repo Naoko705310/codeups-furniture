@@ -1,102 +1,12 @@
 @use "global" as *;
 
-.page-news-details__new-post {
-
-}
-
-.new-post {
-
-}
-
-.new-post__inner {
-  position: relative; // ナビゲーション矢印の配置
-}
-
-.inner {
-
-}
-
-.section-title {
-
-}
-
-.new-post__title {
-
-}
-
-
 // 最新ニューススライダー
+
 .new-post__slider {
   margin-top: rem(40);
   margin-right: calc(50% - 50vw);
-  // overflow: visible; // 見切れスライド表示
   @include mq(md) {
     margin-right: auto;
     margin-left: auto;
   }
 }
-
-.swiper {
-
-}
-
-.swiper-wrapper {
-
-}
-
-.swiper-slide {
-
-}
-
-.new-post__pagination {
-
-}
-
-.swiper-pagination {
-
-}
-
-.new-post__prev {
-
-}
-
-.swiper-button-prev {
-
-}
-
-.new-post__next {
-
-}
-
-.swiper-button-next {
-
-}
-
-// ナビゲーション矢印
-// .new-post__buttons {
-//   width: rem(156);
-//   min-height: rem(46);
-//   position: relative; // ナビゲーション矢印の配置
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   gap: rem(64);
-//   margin: rem(40) auto 0;
-//   @include mq(md) {
-//     width: rem(132);
-//     gap: rem(40);
-//   }
-// }
-
-// .new-post__prev,
-// .new-post__next {
-//   width: rem(46);
-//   height: rem(46);
-// }
-
-// .new-post__prev img,
-// .new-post__next img {
-//   width: 100%;
-//   height: 100%;
-//   object-fit: contain;
-// }

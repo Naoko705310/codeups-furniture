@@ -1,4 +1,4 @@
-// @use "global" as *;
+@use "global" as *;
 
 // // おすすめ商品
 
@@ -18,17 +18,17 @@
 
 
 // // おすすめ商品スライダー
-// .recommend-products__slider {
-//   margin-top: rem(40);
-//   margin-right: calc(50% - 50vw);
-//   margin-left: calc(50% - 50vw);
-//   overflow: visible; // 見切れスライド表示
-//   @include mq(md) {
-//     max-width: rem(931);
-//     margin-right: auto;
-//     margin-left: auto;
-//   }
-// }
+.recommend-products__slider {
+  margin-top: rem(40);
+  margin-right: calc(50% - 50vw);
+  margin-left: calc(50% - 50vw);
+  overflow: visible; // 見切れスライド表示
+  @include mq(md) {
+    max-width: rem(931);
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
 
 // .recommend-products__slider .swiper {
 //   overflow: visible;

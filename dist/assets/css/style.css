@@ -271,7 +271,7 @@ legend {
 	margin-top: 2.5rem;
 }
 
-.page-news-details__products {
+.page-news-details__recommend-products {
 	margin-top: 5rem;
 }
 
@@ -289,6 +289,10 @@ legend {
 
 .page-works__gallery {
 	margin-top: 3rem;
+}
+
+.top-cta {
+	margin-top: 5rem;
 }
 
 .about-philosophy {
@@ -1086,10 +1090,6 @@ body.is-fixed {
 	width: 100%;
 }
 
-.new-post__inner {
-	position: relative;
-}
-
 .new-post__slider {
 	margin-right: calc(50% - 50vw);
 	margin-top: 2.5rem;
@@ -1461,6 +1461,13 @@ body.is-fixed {
 	height: 100%;
 	object-fit: contain;
 	width: 100%;
+}
+
+.recommend-products__slider {
+	margin-left: calc(50% - 50vw);
+	margin-right: calc(50% - 50vw);
+	margin-top: 2.5rem;
+	overflow: visible;
 }
 
 .section-title {
@@ -1945,6 +1952,10 @@ html {
 	margin-top: 7.5rem;
 }
 
+.top-cta {
+	margin-top: 7.5rem;
+}
+
 .about-philosophy {
 	padding-bottom: 8.125rem;
 	padding-top: 5.75rem;
@@ -2294,6 +2305,12 @@ html {
 .products-slider__buttons {
 	gap: 2.5rem;
 	width: 8.25rem;
+}
+
+.recommend-products__slider {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 58.1875rem;
 }
 
 .section-title__en {

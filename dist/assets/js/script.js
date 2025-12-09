@@ -1,5 +1,11 @@
 "use strict";
 
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
+function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
 jQuery(function ($) {
   // この中であればWordpressでも「$」が使用可能になる
   // ===============================
@@ -25,59 +31,19 @@ jQuery(function ($) {
   });
 
   /* --------------------------------------------
-  /* TOPページ 商品スライド
+  /* 共通：Products Slider 設定
   /* -------------------------------------------- */
 
-  var productsSwiper = new Swiper('.top-products__slider', {
+  var baseProductsSliderOptions = {
     loop: true,
-    // ▼ SP（375px）で 3枚表示
-    slidesPerView: 1.35,
-    centeredSlides: true,
-    // ← 真ん中を基準にする
-    spaceBetween: 23,
-    // ← カンプのgap指定
-
-    navigation: {
-      nextEl: '.top-products__next',
-      prevEl: '.top-products__prev'
-    },
-    breakpoints: {
-      // ▼ PC（768px〜）
-      768: {
-        slidesPerView: 3,
-        // PCは 3 枚 FULL 表示
-        centeredSlides: false,
-        spaceBetween: 32
-      }
-    }
-  });
-
-  // ニュース詳細：Recommend
-  var recommendSlider = new Swiper('.recommend-products__slider', {
-    loop: true,
-    loopAdditionalSlides: 2,
-    // ループ時に追加で複製するスライド数
-    slidesPerView: 1.25,
     centeredSlides: true,
     centeredSlidesBounds: false,
-    // 境界を無視して中央配置
-    spaceBetween: 24,
     watchSlidesProgress: true,
-    // スライドの進行状況を監視
     watchSlidesVisibility: true,
-    // スライドの可視性を監視
-
     navigation: {
-      nextEl: '.recommend-products__prev',
-      // ← ボタンで右へ進む
-      prevEl: '.recommend-products__next' // → ボタンで左へ戻る
+      nextEl: '.products-slider__next',
+      prevEl: '.products-slider__prev'
     },
-
-    pagination: {
-      el: '.recommend-products__pagination',
-      clickable: true
-    },
-    // 初期化後に位置を調整
     on: {
       init: function init() {
         this.update();
@@ -85,6 +51,36 @@ jQuery(function ($) {
       resize: function resize() {
         this.update();
       }
+    }
+  };
+
+  /* --------------------------------------------
+  /* TOPページ：Products
+  /* -------------------------------------------- */
+
+  var topProductsSlider = new Swiper('.top-products__slider.products-slider', _objectSpread(_objectSpread({}, baseProductsSliderOptions), {}, {
+    slidesPerView: 1.35,
+    spaceBetween: 23,
+    breakpoints: {
+      768: {
+        slidesPerView: 3,
+        centeredSlides: false,
+        spaceBetween: 32
+      }
+    }
+  }));
+
+  /* --------------------------------------------
+  /* News詳細：Recommend
+  /* -------------------------------------------- */
+
+  var recommendSlider = new Swiper('.recommend-products__slider.products-slider', _objectSpread(_objectSpread({}, baseProductsSliderOptions), {}, {
+    loopAdditionalSlides: 2,
+    slidesPerView: 1.25,
+    spaceBetween: 24,
+    pagination: {
+      el: '.recommend-products__pagination',
+      clickable: true
     },
     breakpoints: {
       768: {
@@ -93,20 +89,15 @@ jQuery(function ($) {
         spaceBetween: 24
       }
     }
-  });
+  }));
 
-  // ニュース詳細：New Post
-  var newPostSlider = new Swiper('.new-post__slider', {
-    loop: true,
+  /* --------------------------------------------
+  /* News詳細：New Post
+  /* -------------------------------------------- */
+
+  var newPostSlider = new Swiper('.new-post__slider.products-slider', _objectSpread(_objectSpread({}, baseProductsSliderOptions), {}, {
     slidesPerView: 1.25,
     spaceBetween: 30,
-    navigation: {
-      // ★ ここも逆にする！
-      nextEl: '.new-post__prev',
-      // ← ボタンで右へ進む
-      prevEl: '.new-post__next' // → ボタンで左へ戻る
-    },
-
     pagination: {
       el: '.new-post__pagination',
       clickable: true
@@ -114,10 +105,11 @@ jQuery(function ($) {
     breakpoints: {
       768: {
         slidesPerView: 3,
+        centeredSlides: false,
         spaceBetween: 30
       }
     }
-  });
+  }));
 
   /* --------------------------------------------
   /* お問い合わせフォーム
