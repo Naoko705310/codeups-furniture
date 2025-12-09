@@ -31,10 +31,10 @@
 }
 
 .top-works__content {
-  // padding-bottom: rem(154);
+  @include mq(md) {
+    width: calc(868 / 1080 * 100%);
+  }
 }
-
-
 
 .top-works__description {
   font-family: $base-font-family;
