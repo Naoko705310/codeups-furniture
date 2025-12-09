@@ -3,24 +3,22 @@
 // インテリアコーディネート（TOPページ）
 
 .top-works {
+  position: relative;
+  overflow: hidden;
   margin-top: rem(80);
   @include mq(md) {
     margin-top: rem(85);
   }
 }
 
-.top-works__content {
-  position: relative;
-}
-
 // 背景帯
-.top-works__content::before {
+.top-works::before {
   content: "";
   position: absolute;
   top: 0;
-  left: 0;
+  right: 0;
   width: calc(64 / 375 * 100vw); // ← 背景帯の幅
-  height: 100%;                
+  height: rem(521);                
   background-image: url(../images/common/top-philosophy-bg.png);
   background-size: cover; 
   background-position: center;
@@ -28,8 +26,15 @@
   z-index: -1;
   @include mq(md) {
     width: calc(260 / 1440 * 100vw); // ← 背景帯の幅
+    height: calc(1382 / 1462 * 100%);
   }       
 }
+
+.top-works__content {
+  // padding-bottom: rem(154);
+}
+
+
 
 .top-works__description {
   font-family: $base-font-family;

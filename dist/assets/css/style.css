@@ -1746,21 +1746,19 @@ body.is-fixed {
 
 .top-works {
 	margin-top: 5rem;
-}
-
-.top-works__content {
+	overflow: hidden;
 	position: relative;
 }
 
-.top-works__content::before {
+.top-works::before {
 	background-image: url(../images/common/top-philosophy-bg.png);
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 	content: "";
-	height: 100%;
-	left: 0;
+	height: 32.5625rem;
 	position: absolute;
+	right: 0;
 	top: 0;
 	width: 17.0666666667vw;
 	z-index: -1;
@@ -2491,7 +2489,8 @@ html {
 	margin-top: 5.3125rem;
 }
 
-.top-works__content::before {
+.top-works::before {
+	height: 94.5280437756%;
 	width: 18.0555555556vw;
 }
 
